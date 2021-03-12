@@ -1,0 +1,20 @@
+import plotly.plotly as py
+import plotly.graph_objs as go
+
+import msql.connector
+import pandas as pd
+
+conn = mysql.connector.connect(
+  host="localhost",
+  user="phdgc",
+  password="cryosub1"
+)
+
+cursor = conn.cursor()
+
+cursor.execute('select id, time , demandCurrent ,  demandVoltage , measuredCurrent, measuredVoltage measuredTemperature  from measuredData');
+
+rows = cursor.fetchall()
+str(rows)[0:300]
+
+
