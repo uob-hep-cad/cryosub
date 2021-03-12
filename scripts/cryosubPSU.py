@@ -18,7 +18,7 @@ class cryosubPSU:
 
         self.outputChannel = outputChannel
         
- 
+        
     def getVoltage(self):
         """Get output voltage from PSU"""
         command = "V%dO?"%(self.outputChannel)
@@ -31,9 +31,10 @@ class cryosubPSU:
 
         str = result.decode('ascii')
 
-        num = str.strip("V")
-        
-        return float(num)
+        num = float(str.strip("\n").strip("V"))
+
+        logging.info("getVoltage result = %f"%(num))
+        return num
 
     
     def setVoltage(self,voltage):
@@ -41,8 +42,9 @@ class cryosubPSU:
         command = "V%dV %f"%(self.outputChannel,voltage)
         logging.info("setVoltage command = %s"%(command))
         gpib.write(self.con,command)
-
-
+        command = "OP%d 1.0"%(self.outputChannel)
+        gpib.write(self.con, command)
+        logging.info("turning on PSU with command = %s"%(command))
 
     def getCurrent(self):
         """Get output current from PSU"""
@@ -53,9 +55,10 @@ class cryosubPSU:
 
         str = result.decode('ascii')
 
-        num = str.strip("A")
-        
-        return float(num)
+        num = float(str.strip("\n").strip("A"))
+        logging.info("getCurrent result = %f"%(num))
+                
+        return num
     
 
     def setCurrent(self,current):

@@ -26,12 +26,13 @@ logging.basicConfig(filename=logFileName, level=logging.INFO)
 logging.info("""Logile for temp/current/voltage montoring for CryoSub""")
 
 #################################################################
-def testAction(db,psu,temp):
+#def testAction(db,psu,temp):
+def testAction():
 
     # read the desired voltage and current.
     [id,date,demandCurrent,demandVoltage] = db.readDemandValues()
 
-    measuredTemperature = temp.getTemp()
+    measuredTemperature = tsens.getTemp()
     logging.info("Temp = %f"%(measuredTemperature));
 
     # Set the PSU voltage/current
@@ -42,14 +43,14 @@ def testAction(db,psu,temp):
     measuredCurrent = psu.getCurrent()
 
     # write the current state into the database
-    writeMeasuredValues(demandCurrent,demandVoltage,measuredCurrent,measuredVoltage,measuredTemperature)
+    db.writeMeasuredValues(demandCurrent,demandVoltage,measuredCurrent,measuredVoltage,measuredTemperature)
     
     #print("Hello")
 
 #################################################################
 
-psuGpibAddr = 2
-psuOutputChan = 0
+psuGpibAddr = 1
+psuOutputChan = 2
 psu = cryosubPSU.cryosubPSU(psuGpibAddr,psuOutputChan)
 
 tsens = cryosubTemp.cryosubTemp()
@@ -59,7 +60,8 @@ db = cryosubDB.cryosubDB()
 scheduler = BlockingScheduler()
 
 logging.info("Setting scheduler")
-job = scheduler.add_job(testAction(db,psu,tsens), trigger='cron', second='*/5')
+#job = scheduler.add_job(testAction(db,psu,tsens), trigger='cron', second='*/5')
+job = scheduler.add_job(testAction, trigger='cron', second='*/5')
 scheduler.print_jobs()
 
 logging.info("Pausing main thread by starting blocking scheduler")
