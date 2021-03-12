@@ -53,3 +53,11 @@ class cryosubDB:
         record = self.dbCursor.fetchall()
 
         return record
+    
+   #########################################################################
+    def readCurrentMeasuredData(self):
+
+        self.dbCursor.execute("""select * from measuredData where id=(select max(id) from measuredData);""");
+        row = self.dbCursor.fetchone()
+
+        return row
