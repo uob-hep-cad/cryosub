@@ -1,0 +1,17 @@
+.title KiCad schematic
+.include "/Users/phdgc/KiCad-Spice-Library/Models/uncategorized/Bordodynovs Electronics Lib/sub/n_channel_small_signal_240V_250V_400V_600V_L0.lib"
+R7 Net-_R6-Pad2_ 0 30k
+V2 /vg2 Net-_R6-Pad2_ dc 0 ac 1 sin(0 500m 1k)
+R5 VDD /vd2 4.7k
+R9 /vg1 /vd2 100k
+XQ2 /vd2 /vg2 /vs BSS127_L0
+R6 VDD Net-_R6-Pad2_ 20k
+R2 /vg1 0 30k
+R4 /vs 0 1K
+R3 VDD /vd1 4.7k
+R8 /vd1 /vg2 100k
+R1 VDD /vg1 20k
+XQ1 /vd1 /vg1 /vs BSS127_L0
+V1 VDD 0 dc 5
+.TNOM=50 
+.end
