@@ -1,0 +1,5 @@
+BSIM3v3.3.0 Parameter Checking.
+Model = xq1:m_mod
+Warning: Pscbe2 = 0 is not positive.
+Warning: Pd = 0 is less than W.
+Warning: Ps = 0 is less than W.

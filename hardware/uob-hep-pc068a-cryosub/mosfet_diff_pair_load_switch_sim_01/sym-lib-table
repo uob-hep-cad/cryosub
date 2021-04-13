@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name FDD306P)(type Legacy)(uri /home/phdgc/Download/FDD306P.lib)(options "")(descr ""))
+  (lib (name Tomarus)(type Legacy)(uri /home/phdgc/Download/Tomarus.lib)(options "")(descr ""))
+)

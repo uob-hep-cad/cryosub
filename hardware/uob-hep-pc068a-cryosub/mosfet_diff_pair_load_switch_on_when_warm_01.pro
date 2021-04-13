@@ -1,4 +1,4 @@
-update=Sat 27 Mar 2021 18:34:04 GMT
+update=Mon 12 Apr 2021 09:15:29 BST
 version=1
 last_client=kicad
 [general]
@@ -24,7 +24,6 @@ SolderMaskMinWidth=0.000000000000
 DrawSegmentWidth=0.200000000000
 BoardOutlineThickness=0.100000000000
 ModuleOutlineThickness=0.150000000000
-CopperEdgeClearance=0.000000000000
 [cvpcb]
 version=1
 NetIExt=net
@@ -38,7 +37,7 @@ PageLayoutDescrFile=
 PlotDirectoryName=
 SubpartIdSeparator=0
 SubpartFirstId=65
-NetFmtName=Spice
-SpiceAjustPassiveValues=1
+NetFmtName=Pcbnew
+SpiceAjustPassiveValues=0
 LabSize=50
 ERC_TestSimilarLabels=1

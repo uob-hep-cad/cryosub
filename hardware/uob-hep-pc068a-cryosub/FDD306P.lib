@@ -21,7 +21,7 @@ Rbreak 17 7 RbreakMOD 1
 Rdrain 5 16 RdrainMOD 11m 
 .MODEL RdrainMOD RES (TC1=3e-3 TC2=1e-5)
 M_BSIM3 16 6 7 7 M_MOD W=0.776 L=1.22u NRS=1  
-.MODEL  M_MOD PMOS (LEVEL=7 VERSION=3.1 MOBMOD=3 CAPMOD=2 paramchk=1 NQSMOD=0)
+.MODEL  M_MOD PMOS (LEVEL=8 MOBMOD=3 CAPMOD=2 paramchk=1 NQSMOD=0
 ***Process Parameters
 + TOX=160e-10 ;Oxide thickness
 + XJ=0.93u ;Channel depth 
@@ -39,8 +39,8 @@ M_BSIM3 16 6 7 7 M_MOD W=0.776 L=1.22u NRS=1
 + CJ=0 CF=0p CKAPPA=2.5
 *** Temperature parameters
 + KT1=-0.55 KT2=0 UA1=1.8E-10 
-+ NJ=10 
-.ENDS 
++ NJ=10 )
+.ENDS FDD306P
 *FDD306P (Rev.A) 6/12/06
 *ST
 *$

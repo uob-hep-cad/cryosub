@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name kicad_cryosub_simlib)(type Legacy)(uri ${KIPRJMOD}/kicad_cryosub_simlib.lib)(options "")(descr ""))
+)
