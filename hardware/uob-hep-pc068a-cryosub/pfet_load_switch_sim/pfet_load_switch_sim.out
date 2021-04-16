@@ -1,5 +1,5 @@
 
-**** 04/02/21 13:47:06 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+**** 04/14/21 17:02:56 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
 
  .title KiCad schematic
 
@@ -37,7 +37,7 @@ Rbreak 17 7 RbreakMOD 1
 Rdrain 5 16 RdrainMOD 11m 
 .MODEL RdrainMOD RES (TC1=3e-3 TC2=1e-5)
 M_BSIM3 16 6 7 7 M_MOD W=0.776 L=1.22u NRS=1  
-.MODEL  M_MOD PMOS (LEVEL=7 VERSION=3.1 MOBMOD=3 CAPMOD=2 paramchk=1 NQSMOD=0)
+.MODEL  M_MOD PMOS (LEVEL=8 MOBMOD=3 CAPMOD=2 paramchk=1 NQSMOD=0
 ***Process Parameters
 + TOX=160e-10 ;Oxide thickness
 + XJ=0.93u ;Channel depth 
@@ -55,7 +55,7 @@ M_BSIM3 16 6 7 7 M_MOD W=0.776 L=1.22u NRS=1
 + CJ=0 CF=0p CKAPPA=2.5
 *** Temperature parameters
 + KT1=-0.55 KT2=0 UA1=1.8E-10 
-+ NJ=10 
++ NJ=10 )
 .ENDS FDD306P
 *FDD306P (Rev.A) 6/12/06
 *ST
@@ -67,196 +67,9 @@ V1 /vdd 0 dc 5
 V2 /vcont 0 pulse(0 5 0 10 10 20 40)
 R1 /vload 0 5
 .tran 0.1 30
-
+.run
+$
+ERROR(ORPSIM-16056): Unrecognizable command
 
 .end
-
-WARNING(ORPSIM-15235): Mosfet XQ1.M_BSIM3, model XQ1.M_MOD: Pd = 0 is less than W
-
-WARNING(ORPSIM-15235): Mosfet XQ1.M_BSIM3, model XQ1.M_MOD: Ps = 0 is less than W
-
-INFO(ORPSIM-15454): Model XQ1.M_MOD: Using BSIM VERSION 3.1 or lower
-
-**** 04/02/21 13:47:06 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
-
- .title KiCad schematic
-
-
- ****     Diode MODEL PARAMETERS
-
-
-******************************************************************************
-
-
-
-
-               XQ1.DbodyMOD    XQ1.DbreakMOD   
-          IS   10.000000E-09   10.000000E-15 
-           N    1.35                         
-          RS     .033            .08         
-          TT   17.400000E-09                 
-         CJO  550.000000E-12                 
-           M     .6                          
-         XTI     .01                         
-        TRS1    4.500000E-03     .09         
-        TRS2    8.500000E-06                 
-
-
-**** 04/02/21 13:47:06 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
-
- .title KiCad schematic
-
-
- ****     MOSFET MODEL PARAMETERS
-
-
-******************************************************************************
-
-
-
-
-               XQ1.M_MOD       
-               PMOS            
-       LEVEL    7            
-           L  100.000000E-06 
-           W  100.000000E-06 
-         VTO    -.55         
-          KP  129.492900E-06 
-       GAMMA    0            
-      LAMBDA    0            
-         RSH    2.100000E-03 
-          IS    1.000000E-15 
-          JS  100.000000E-06 
-          PB    1            
-        PBSW    1            
-          CJ    0            
-        CJSW  500.000000E-12 
-        CGSO  620.000000E-12 
-        CGDO   80.000000E-12 
-        CGBO    0            
-         TOX   16.000000E-09 
-          XJ  930.000000E-09 
-       UCRIT   10.000000E+03 
-       DELTA     .5          
-      DIOMOD    2            
-        LETA    0            
-        WETA    0            
-          U0  200            
-       XPART    0            
-        VTH0    -.55         
-          UA    2.250000E-09 
-          UB  587.000000E-21 
-          UC    -.0465       
-        VSAT    5.000000E+06 
-        RDSW    0            
-        VOFF    -.1          
-     NFACTOR    1.2          
-       DROUT    1.2          
-      PSCBE2    0            
-          A0    1            
-          A1    0            
-          A2    1            
-       NPEAK  220.000000E+15 
-         LDD    0            
-        LITL  211.281800E-09 
-         KT1    -.55         
-         KT2    0            
-         UA1  180.000000E-12 
-         UB1   -7.610000E-18 
-         UC1    -.056        
-        DSUB    1.2          
-      MOBMOD    3            
-      NQSMOD    0            
-        PRWG    0            
-        CGDL    1.100000E-09 
-      CKAPPA    2.5          
-        LINT  430.000000E-09 
-         DLC  430.000000E-09 
-         DWC    0            
-          CF    0            
-        NOIA    9.900000E+18 
-        NOIB    2.400000E+03 
-        NOIC    1.400000E-12 
-         VTM     .025864     
-    PARAMCHK    1            
-     VERSION    3.1          
-          NJ   10            
-       PBSWG    1            
-       MJSWG     .33         
-       CJSWG  500.000000E-12 
-
-
-**** 04/02/21 13:47:06 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
-
- .title KiCad schematic
-
-
- ****     Resistor MODEL PARAMETERS
-
-
-******************************************************************************
-
-
-
-
-               XQ1.RbreakMOD   XQ1.RdrainMOD   
-           R    1               1            
-         TC1  800.000000E-06    3.000000E-03 
-         TC2 -200.000000E-09   10.000000E-06 
-
-
-WARNING(ORPSIM-15235): Mosfet XQ1.M_BSIM3, model XQ1.M_MOD: Pd = 0 is less than W
-
-WARNING(ORPSIM-15235): Mosfet XQ1.M_BSIM3, model XQ1.M_MOD: Ps = 0 is less than W
-
-**** 04/02/21 13:47:06 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
-
- .title KiCad schematic
-
-
- ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
-
-
-******************************************************************************
-
-
-
- NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
-
-
-( /vdd)    5.0000  (XQ1.5)    0.0000  (XQ1.6)    0.0000  (XQ1.7)    5.0000      
-
-(XQ1.9)    0.0000  (/vcont)    0.0000 (/vload)    0.0000 (XQ1.11)   13.7500     
-
-(XQ1.16)    1.7778 (XQ1.17)    6.0000 
-
-
-
-
-    VOLTAGE SOURCE CURRENTS
-    NAME         CURRENT
-
-    V1          -1.616E+02
-    V2           1.616E+02
-
-    TOTAL POWER DISSIPATION   8.08E+02  WATTS
-
-
-
-          JOB CONCLUDED
-
-**** 04/02/21 13:47:06 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
-
- .title KiCad schematic
-
-
- ****     JOB STATISTICS SUMMARY
-
-
-******************************************************************************
-
-
-
-  License check-out time            =        1.78
-  Total job time (using Solver 1)   =         .02
 

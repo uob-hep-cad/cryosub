@@ -1,7 +1,10 @@
 .title KiCad schematic
 .include "../FDD306P.lib"
-XQ1 /vload /vcont /vdd FDD306P
+XQ1 /vcont /vload /vdd FDD306P
 V1 /vdd 0 dc 5
 V2 /vcont 0 pulse(0 5 0 10 10 20 40)
 R1 /vload 0 5
+.tran 0.1 30
+.run
+
 .end

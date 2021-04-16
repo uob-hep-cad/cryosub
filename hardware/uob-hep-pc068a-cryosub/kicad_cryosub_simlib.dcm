@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP SIM_NTC_10K_1
+D Temperature dependent resistor, negative temperature coefficient, 4-wire interface
+K thermistor NTC resistor sensor RTD
+F ~
+$ENDCMP
+#
+#End Doc Library
