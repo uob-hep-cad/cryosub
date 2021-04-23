@@ -7,6 +7,8 @@ import plotly.graph_objs as go
 import mysql.connector
 import pandas as pd
 
+import matplotlib.pyplot as plt
+
 conn = mysql.connector.connect(
     host="localhost",
     user="phdgc",
@@ -21,13 +23,22 @@ cursor.execute('select id, time , demandCurrent ,  demandVoltage , measuredCurre
 rows = cursor.fetchall()
 #str(rows)[0:300]
 
-
 df = pd.DataFrame( [[ij for ij in i] for i in rows] )
 df.rename(columns={0: 'id', 1: 'time', 2: 'demandCurrent', 3: 'demandVoltage', 4:'measuredCurrent', 5:'measuredVoltage', 6:'measuredTemperature'}, inplace=True);
 df = df.sort_values(['id'], ascending=[1]);
 
 print(df)
 
+#plt.figure()
+#ax1 = df.plot(x="id",y="measuredTemperature")
+ax1 = df.plot(x="time",y="measuredTemperature")
+df.plot(x="time",y="measuredVoltage",ax=ax1)
+
+plt.show()
+exit
+
+#
+#
 trace1 = go.Scatter(
     x=df['id'],
     y=df['measuredTemperature'],
