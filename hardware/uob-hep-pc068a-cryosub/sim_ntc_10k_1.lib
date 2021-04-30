@@ -6,9 +6,11 @@
 * thermistor terminals:	1,2
 * temperature input+,-:	3,4
 * (temperature in Kelvin)
+* was 3548
+* beta = 3370K , TH20-3H10-3FB
 *
 .SUBCKT NTC_10K_1   1  2  3  4
-ETHERM	1 6	 VALUE = { I(VSENSE)*10K*EXP( 3548/(V(3,4)) - 3548/(25+273) ) }
+ETHERM	1 6	 VALUE = { I(VSENSE)*10K*EXP( 3370/(V(3,4)) - 3370/(25+273) ) }
 VSENSE	6	2	DC	0
 .ENDS
 *
