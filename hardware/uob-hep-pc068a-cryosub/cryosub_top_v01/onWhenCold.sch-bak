@@ -422,4 +422,6 @@ Wire Wire Line
 	3350 4850 4550 4850
 Wire Wire Line
 	2750 4050 2750 4850
+Text Notes 7150 6950 0    50   ~ 0
+"On when cold"\nTurns off at 29 C when warming from cold\nTurns on at 19 C when cooling
 $EndSCHEMATC

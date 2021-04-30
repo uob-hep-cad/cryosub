@@ -2,24 +2,28 @@
 .include "./FDD306P.lib"
 .include "./IFX-Power_OptiMOS_N-channel_small_signal_MOSFET_240V_250V_400V_600V_Spice-web.lib"
 .include "./sim_ntc_10k_1.lib"
-R7 5V0 /vg2 6.6k
+R7 5V0 /vg2 62k
 V2 /vcont 0 dc 270 ac 1 pulse(1 350 0 10 10 10 100)
 XQ2 /vd2 /vg2 /vs BSS127_L0
 V1 5V0 0 dc 5
 XQ1 /VD1 /vg1 /vs BSS127_L0
 R5 5V0 /vd2 4.7k
-R9 /vg1 /vd2 20k
+R9 /vg1 /vd2 200k
 R3 5V0 /VD1 4.7k
-R8 /VD1 /vg2 20k
-R1 5V0 /vg1 6.6k
+R8 /VD1 /vg2 200k
+R1 5V0 /vg1 62k
 R4 /vs 0 1K
-R2 /vg1 0 10k
+R2 /vg1 0 100k
 XTH1 /vg2 0 /vcont 0 NTC_10K_1
-XQ3 /vload /VD1 5V0 FDD306P
+XQ3 /vload Net-_C1-Pad2_ 5V0 FDD306P
 R6 /vload 0 5
-.TEMP 27 
+C2 /vload 0 1uF
+C1 /vload Net-_C1-Pad2_ 30nF
+R10 Net-_C1-Pad2_ /VD1 1k
+.TEMP -25 
 .CONTROL 
 OPTIONS ABSTOL=1nA CHGTOL=1pC ITL1=150 ITL2=150 ITL4=500 RELTOL=0.011 
+tran 10m 30
 set filetype=ascii 
 set wr_vecnames 
 set wr_singlescale 

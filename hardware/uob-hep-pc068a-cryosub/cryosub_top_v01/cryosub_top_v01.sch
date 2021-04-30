@@ -340,19 +340,13 @@ Text Notes 9800 800  0    50   ~ 0
 Text Notes 4950 5900 0    50   ~ 0
 *either* fit R23,\n*or* provide power on USB
 Wire Wire Line
-	8950 2200 8850 2200
-Wire Wire Line
 	9450 2200 9700 2200
-Wire Wire Line
-	8950 2300 8850 2300
 Wire Wire Line
 	8200 2300 8200 2150
 Wire Wire Line
 	9450 2300 10150 2300
 Wire Wire Line
 	10150 2300 10150 2400
-Wire Wire Line
-	8950 2400 8850 2400
 Text Label 8800 1400 0    50   ~ 0
 usb_d+
 Text Label 8800 1500 0    50   ~ 0
@@ -369,11 +363,7 @@ Connection ~ 9450 3500
 Wire Wire Line
 	9450 3500 9800 3500
 Wire Wire Line
-	8800 2600 8850 2600
-Wire Wire Line
 	8800 2600 8800 3150
-Wire Wire Line
-	8500 2500 8850 2500
 Wire Wire Line
 	8500 2500 8500 3150
 $Comp
@@ -387,19 +377,14 @@ F 3 "~" H 9250 2400 50  0001 C CNN
 	1    9250 2400
 	-1   0    0    -1  
 $EndComp
-Connection ~ 8850 2600
 Wire Wire Line
-	8850 2600 8950 2600
-Connection ~ 8850 2200
+	8700 2200 8950 2200
 Wire Wire Line
-	8850 2200 8700 2200
-Connection ~ 8850 2300
+	8200 2300 8950 2300
 Wire Wire Line
-	8850 2300 8200 2300
-Connection ~ 8850 2400
+	8200 2400 8950 2400
 Wire Wire Line
-	8850 2400 8200 2400
-Connection ~ 8850 2500
+	8800 2600 8950 2600
 Wire Wire Line
-	8850 2500 8950 2500
+	8500 2500 8950 2500
 $EndSCHEMATC

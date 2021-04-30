@@ -20,7 +20,7 @@ L Device:R R7
 U 1 1 60597D14
 P 6750 3400
 F 0 "R7" H 6820 3445 50  0000 L CNN
-F 1 "6.6k" H 6820 3355 50  0000 L CNN
+F 1 "6.8k" H 6820 3355 50  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 6680 3400 50  0001 C CNN
 F 3 "~" H 6750 3400 50  0001 C CNN
 	1    6750 3400
@@ -91,7 +91,7 @@ Wire Wire Line
 Wire Wire Line
 	2450 4500 2450 4850
 Text Notes 3800 1700 2    50   ~ 0
-+pspice \n.TEMP 27\n.CONTROL \nOPTIONS ABSTOL=1nA CHGTOL=1pC ITL1=150 ITL2=150 ITL4=500 RELTOL=0.011\nset filetype=ascii\nset wr_vecnames\nset wr_singlescale\nwrdata tmp.txt V("/vd1") V("/vd2") V("/vcont") V("/vload")\n.ENDC\n* .IC V(/vd2)=2.0  V(/vd1)=4.5  
++pspice \n.TEMP 27\n.CONTROL \nOPTIONS ABSTOL=1nA CHGTOL=1pC ITL1=150 ITL2=150 ITL4=500 RELTOL=0.011\nset filetype=ascii\nset wr_vecnames\nset wr_singlescale\nwrdata mosfet_diff_pair_load_switch_on_when_cold_01.csv V("/vd1") V("/vd2") V("/vtemp") V("/vload")\n.ENDC\n* .IC V(/vd2)=2.0  V(/vd1)=4.5  
 Wire Wire Line
 	5550 3850 5800 3850
 Text Label 5700 3850 2    50   ~ 0
@@ -203,7 +203,7 @@ L Device:R R1
 U 1 1 60596F01
 P 3350 3400
 F 0 "R1" H 3420 3445 50  0000 L CNN
-F 1 "6.6k" H 3420 3355 50  0000 L CNN
+F 1 "6.8k" H 3420 3355 50  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 3280 3400 50  0001 C CNN
 F 3 "~" H 3350 3400 50  0001 C CNN
 	1    3350 3400
@@ -471,10 +471,10 @@ Connection ~ 8850 4850
 Wire Wire Line
 	8850 4850 9800 4850
 $Comp
-L Device:R R?
+L Device:R R12
 U 1 1 607FC873
 P 8000 3150
-F 0 "R?" V 7793 3150 50  0000 C CNN
+F 0 "R12" V 7793 3150 50  0000 C CNN
 F 1 "1k" V 7884 3150 50  0000 C CNN
 F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 7930 3150 50  0001 C CNN
 F 3 "~" H 8000 3150 50  0001 C CNN
@@ -484,10 +484,10 @@ $EndComp
 Wire Wire Line
 	7850 3150 7700 3150
 $Comp
-L Device:D_Schottky D?
+L Device:D_Schottky D2
 U 1 1 607FC883
 P 7550 3150
-F 0 "D?" H 7550 2933 50  0000 C CNN
+F 0 "D2" H 7550 2933 50  0000 C CNN
 F 1 "D_Schottky" H 7550 3024 50  0000 C CNN
 F 2 "" H 7550 3150 50  0001 C CNN
 F 3 "~" H 7550 3150 50  0001 C CNN
@@ -511,10 +511,10 @@ Wire Wire Line
 Text HLabel 7200 3150 0    50   Input ~ 0
 vcont
 $Comp
-L pspice:0 #GND?
+L pspice:0 #GND0101
 U 1 1 6080CABD
 P 10850 4850
-F 0 "#GND?" H 10850 4750 50  0001 C CNN
+F 0 "#GND0101" H 10850 4750 50  0001 C CNN
 F 1 "0" H 10850 4939 50  0000 C CNN
 F 2 "" H 10850 4850 50  0001 C CNN
 F 3 "~" H 10850 4850 50  0001 C CNN

@@ -20,7 +20,7 @@ L Device:R R8
 U 1 1 60855E6F
 P 6750 3400
 F 0 "R8" H 6820 3445 50  0000 L CNN
-F 1 "6.6k" H 6820 3355 50  0000 L CNN
+F 1 "62k" H 6820 3355 50  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 6680 3400 50  0001 C CNN
 F 3 "~" H 6750 3400 50  0001 C CNN
 	1    6750 3400
@@ -100,7 +100,7 @@ L Device:R R6
 U 1 1 60855E72
 P 4900 3450
 F 0 "R6" V 5106 3450 50  0000 C CNN
-F 1 "10k" V 5015 3450 50  0000 C CNN
+F 1 "200k" V 5015 3450 50  0000 C CNN
 F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 4830 3450 50  0001 C CNN
 F 3 "~" H 4900 3450 50  0001 C CNN
 	1    4900 3450
@@ -150,7 +150,7 @@ L Device:R R4
 U 1 1 60855E73
 P 4300 3600
 F 0 "R4" V 4400 3600 50  0000 C CNN
-F 1 "10k" V 4200 3600 50  0000 C CNN
+F 1 "200k" V 4200 3600 50  0000 C CNN
 F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 4230 3600 50  0001 C CNN
 F 3 "~" H 4300 3600 50  0001 C CNN
 	1    4300 3600
@@ -165,7 +165,7 @@ L Device:R R1
 U 1 1 60855E6D
 P 3350 3400
 F 0 "R1" H 3420 3445 50  0000 L CNN
-F 1 "6.6k" H 3420 3355 50  0000 L CNN
+F 1 "62k" H 3420 3355 50  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 3280 3400 50  0001 C CNN
 F 3 "~" H 3350 3400 50  0001 C CNN
 	1    3350 3400
@@ -374,4 +374,6 @@ Wire Wire Line
 	6750 4450 6750 4850
 Text Notes 8000 3850 0    50   ~ 0
 RC to slow turn-on of load switch\nand reduce inrush current
+Text Notes 7150 6950 0    50   ~ 0
+"On when warm"\nTurn on at -23 C when warming up\nTurn off at -31 C when cooling down
 $EndSCHEMATC

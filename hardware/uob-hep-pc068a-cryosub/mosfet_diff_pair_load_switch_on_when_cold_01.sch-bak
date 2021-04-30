@@ -91,7 +91,7 @@ Wire Wire Line
 Wire Wire Line
 	2450 4500 2450 4850
 Text Notes 3800 1700 2    50   ~ 0
-+pspice \n.TEMP 27\n.CONTROL \nOPTIONS ABSTOL=1nA CHGTOL=1pC ITL1=150 ITL2=150 ITL4=500 RELTOL=0.011\nset filetype=ascii\nset wr_vecnames\nset wr_singlescale\nwrdata tmp.txt V("/vd1") V("/vd2") V("/vcont") V("/vload")\n.ENDC\n* .IC V(/vd2)=2.0  V(/vd1)=4.5  
++pspice \n.TEMP 27\n.CONTROL \nOPTIONS ABSTOL=1nA CHGTOL=1pC ITL1=150 ITL2=150 ITL4=500 RELTOL=0.011\nset filetype=ascii\nset wr_vecnames\nset wr_singlescale\nwrdata mosfet_diff_pair_load_switch_on_when_cold_01.csv V("/vd1") V("/vd2") V("/vtemp") V("/vload")\n.ENDC\n* .IC V(/vd2)=2.0  V(/vd1)=4.5  
 Wire Wire Line
 	5550 3850 5800 3850
 Text Label 5700 3850 2    50   ~ 0
@@ -296,7 +296,7 @@ Wire Wire Line
 Wire Wire Line
 	8050 3900 8050 4000
 Text Label 7350 3900 0    50   ~ 0
-vcont
+vtemp
 Wire Wire Line
 	6750 2900 6750 3250
 Wire Wire Line
@@ -415,7 +415,7 @@ L Device:R R10
 U 1 1 607712E1
 P 8000 3500
 F 0 "R10" V 7793 3500 50  0000 C CNN
-F 1 "100" V 7884 3500 50  0000 C CNN
+F 1 "1k" V 7884 3500 50  0000 C CNN
 F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 7930 3500 50  0001 C CNN
 F 3 "~" H 8000 3500 50  0001 C CNN
 	1    8000 3500
@@ -461,7 +461,7 @@ $EndComp
 Wire Wire Line
 	6750 4850 8850 4850
 Wire Wire Line
-	8150 3500 8850 3500
+	8150 3500 8450 3500
 Connection ~ 8850 3500
 Wire Wire Line
 	8850 3950 8850 3500
@@ -470,4 +470,59 @@ Wire Wire Line
 Connection ~ 8850 4850
 Wire Wire Line
 	8850 4850 9800 4850
+$Comp
+L Device:R R12
+U 1 1 607FC873
+P 8000 3150
+F 0 "R12" V 7793 3150 50  0000 C CNN
+F 1 "1k" V 7884 3150 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 7930 3150 50  0001 C CNN
+F 3 "~" H 8000 3150 50  0001 C CNN
+	1    8000 3150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7850 3150 7700 3150
+$Comp
+L Device:D_Schottky D2
+U 1 1 607FC883
+P 7550 3150
+F 0 "D2" H 7550 2933 50  0000 C CNN
+F 1 "D_Schottky" H 7550 3024 50  0000 C CNN
+F 2 "" H 7550 3150 50  0001 C CNN
+F 3 "~" H 7550 3150 50  0001 C CNN
+F 4 "D" H 7550 3150 50  0001 C CNN "Spice_Primitive"
+F 5 "rb751v40t1g" H 7550 3150 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 7550 3150 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "RB751V40T1G.lib" H 7550 3150 50  0001 C CNN "Spice_Lib_File"
+F 8 "2 1" H 7550 3150 50  0001 C CNN "Spice_Node_Sequence"
+	1    7550 3150
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7400 3150 7200 3150
+Wire Wire Line
+	8150 3150 8450 3150
+Wire Wire Line
+	8450 3150 8450 3500
+Connection ~ 8450 3500
+Wire Wire Line
+	8450 3500 8850 3500
+Text HLabel 7200 3150 0    50   Input ~ 0
+vcont
+$Comp
+L pspice:0 #GND0101
+U 1 1 6080CABD
+P 10850 4850
+F 0 "#GND0101" H 10850 4750 50  0001 C CNN
+F 1 "0" H 10850 4939 50  0000 C CNN
+F 2 "" H 10850 4850 50  0001 C CNN
+F 3 "~" H 10850 4850 50  0001 C CNN
+	1    10850 4850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10850 4850 10850 4500
+Text Label 10850 4500 0    50   ~ 0
+vcont
 $EndSCHEMATC
