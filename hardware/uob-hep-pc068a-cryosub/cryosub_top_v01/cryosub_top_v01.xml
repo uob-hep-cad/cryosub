@@ -1,0 +1,1061 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="D">
+  <design>
+    <source>/data/OneDrive/phdgc/DUNE/cryosub-github/hardware/uob-hep-pc068a-cryosub/cryosub_top_v01/cryosub_top_v01.sch</source>
+    <date>Fri 30 Apr 2021 10:23:27 BST</date>
+    <tool>Eeschema 5.1.9-1.fc33</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>cryosub_top_v01.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="2" name="/on When Warm/" tstamps="/60854ED0/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>onWhenWarm.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="3" name="/on When Cold/" tstamps="/60855826/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>onWhenCold.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="U1">
+      <value>CMOD-A7</value>
+      <footprint>Package_DIP:DIP-48_W15.24mm_LongPads</footprint>
+      <libsource lib="cmoda7" part="CMOD-A7" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6085A3E9</tstamp>
+    </comp>
+    <comp ref="TH1">
+      <value>PT100</value>
+      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical</footprint>
+      <datasheet>https://www.heraeus.com/media/media/group/doc_group/products_1/hst/sot_to/de_15/to_92_d.pdf</datasheet>
+      <libsource lib="Sensor_Temperature" part="PT100" description="PT100 platinum temperature sensor (RTD)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60866504</tstamp>
+    </comp>
+    <comp ref="C1">
+      <value>1uF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60867CE5</tstamp>
+    </comp>
+    <comp ref="R21">
+      <value>5</value>
+      <footprint>Package_TO_SOT_SMD:TO-263-2_TabPin1</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="Heater" description="Resistive heater"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6087500B</tstamp>
+    </comp>
+    <comp ref="J2">
+      <value>Conn_01x04_Male</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="Conn_01x04_Male" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6088B5DC</tstamp>
+    </comp>
+    <comp ref="R22">
+      <value>1k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>608E734D</tstamp>
+    </comp>
+    <comp ref="C6">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>608E96D3</tstamp>
+    </comp>
+    <comp ref="R23">
+      <value>0</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60925F0B</tstamp>
+    </comp>
+    <comp ref="J1">
+      <value>Conn_02x05_Top_Bottom</value>
+      <footprint>Connector_Molex:Molex_Micro-Fit_3.0_43045-1000_2x05_P3.00mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector_Generic" part="Conn_02x05_Top_Bottom" description="Generic connector, double row, 02x05, top/bottom pin numbering scheme (row 1: 1...pins_per_row, row2: pins_per_row+1 ... num_pins), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>609BA53C</tstamp>
+    </comp>
+    <comp ref="R8">
+      <value>62k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/on When Warm/" tstamps="/60854ED0/"/>
+      <tstamp>60855E6F</tstamp>
+    </comp>
+    <comp ref="Q2">
+      <value>BSS127S</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
+      <datasheet>http://www.diodes.com/assets/Datasheets/BSS127.pdf</datasheet>
+      <fields>
+        <field name="Spice_Lib_File">./IFX-Power_OptiMOS_N-channel_small_signal_MOSFET_240V_250V_400V_600V_Spice-web.lib</field>
+        <field name="Spice_Model">BSS127_L0</field>
+        <field name="Spice_Netlist_Enabled">Y</field>
+        <field name="Spice_Node_Sequence">3 1 2</field>
+        <field name="Spice_Primitive">X</field>
+      </fields>
+      <libsource lib="Transistor_FET" part="BSS127S" description="0.07A Id, 600V Vds, N-Channel MOSFET, SOT-23"/>
+      <sheetpath names="/on When Warm/" tstamps="/60854ED0/"/>
+      <tstamp>60855E71</tstamp>
+    </comp>
+    <comp ref="Q1">
+      <value>BSS127S</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
+      <datasheet>http://www.diodes.com/assets/Datasheets/BSS127.pdf</datasheet>
+      <fields>
+        <field name="Spice_Lib_File">./IFX-Power_OptiMOS_N-channel_small_signal_MOSFET_240V_250V_400V_600V_Spice-web.lib</field>
+        <field name="Spice_Model">BSS127_L0</field>
+        <field name="Spice_Netlist_Enabled">Y</field>
+        <field name="Spice_Node_Sequence">3 1 2 </field>
+        <field name="Spice_Primitive">X</field>
+      </fields>
+      <libsource lib="Transistor_FET" part="BSS127S" description="0.07A Id, 600V Vds, N-Channel MOSFET, SOT-23"/>
+      <sheetpath names="/on When Warm/" tstamps="/60854ED0/"/>
+      <tstamp>60855E70</tstamp>
+    </comp>
+    <comp ref="R7">
+      <value>4.7k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/on When Warm/" tstamps="/60854ED0/"/>
+      <tstamp>605937CE</tstamp>
+    </comp>
+    <comp ref="R6">
+      <value>200k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/on When Warm/" tstamps="/60854ED0/"/>
+      <tstamp>60855E72</tstamp>
+    </comp>
+    <comp ref="R3">
+      <value>4.7k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/on When Warm/" tstamps="/60854ED0/"/>
+      <tstamp>6059315B</tstamp>
+    </comp>
+    <comp ref="R4">
+      <value>200k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/on When Warm/" tstamps="/60854ED0/"/>
+      <tstamp>60855E73</tstamp>
+    </comp>
+    <comp ref="R1">
+      <value>62k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/on When Warm/" tstamps="/60854ED0/"/>
+      <tstamp>60855E6D</tstamp>
+    </comp>
+    <comp ref="R5">
+      <value>1K</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/on When Warm/" tstamps="/60854ED0/"/>
+      <tstamp>60592A8B</tstamp>
+    </comp>
+    <comp ref="R2">
+      <value>100k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/on When Warm/" tstamps="/60854ED0/"/>
+      <tstamp>60855E6E</tstamp>
+    </comp>
+    <comp ref="Q3">
+      <value>FDD306P</value>
+      <footprint>Package_TO_SOT_SMD:TO-252-3_TabPin2</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Spice_Lib_File">./FDD306P.lib</field>
+        <field name="Spice_Model">FDD306P</field>
+        <field name="Spice_Netlist_Enabled">Y</field>
+        <field name="Spice_Node_Sequence">2 1 3</field>
+        <field name="Spice_Primitive">X</field>
+      </fields>
+      <libsource lib="Device" part="Q_PMOS_GDS" description="P-MOSFET transistor, gate/drain/source"/>
+      <sheetpath names="/on When Warm/" tstamps="/60854ED0/"/>
+      <tstamp>60855E74</tstamp>
+    </comp>
+    <comp ref="C3">
+      <value>30nF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/on When Warm/" tstamps="/60854ED0/"/>
+      <tstamp>6076DAA7</tstamp>
+    </comp>
+    <comp ref="R9">
+      <value>1k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/on When Warm/" tstamps="/60854ED0/"/>
+      <tstamp>60855E76</tstamp>
+    </comp>
+    <comp ref="C4">
+      <value>1uF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/on When Warm/" tstamps="/60854ED0/"/>
+      <tstamp>60757828</tstamp>
+    </comp>
+    <comp ref="C2">
+      <value>1uF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/on When Warm/" tstamps="/60854ED0/"/>
+      <tstamp>6078F49F</tstamp>
+    </comp>
+    <comp ref="TH2">
+      <value>10k Thermistor_NTC</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="Thermistor_NTC" description="Temperature dependent resistor, negative temperature coefficient"/>
+      <sheetpath names="/on When Warm/" tstamps="/60854ED0/"/>
+      <tstamp>6079B2A4</tstamp>
+    </comp>
+    <comp ref="R17">
+      <value>6.8k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/on When Cold/" tstamps="/60855826/"/>
+      <tstamp>60597D14</tstamp>
+    </comp>
+    <comp ref="Q5">
+      <value>BSS127S</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
+      <datasheet>http://www.diodes.com/assets/Datasheets/BSS127.pdf</datasheet>
+      <fields>
+        <field name="Spice_Lib_File">./IFX-Power_OptiMOS_N-channel_small_signal_MOSFET_240V_250V_400V_600V_Spice-web.lib</field>
+        <field name="Spice_Model">BSS127_L0</field>
+        <field name="Spice_Netlist_Enabled">Y</field>
+        <field name="Spice_Node_Sequence">3 1 2</field>
+        <field name="Spice_Primitive">X</field>
+      </fields>
+      <libsource lib="Transistor_FET" part="BSS127S" description="0.07A Id, 600V Vds, N-Channel MOSFET, SOT-23"/>
+      <sheetpath names="/on When Cold/" tstamps="/60855826/"/>
+      <tstamp>605C1A8E</tstamp>
+    </comp>
+    <comp ref="Q4">
+      <value>BSS127S</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
+      <datasheet>http://www.diodes.com/assets/Datasheets/BSS127.pdf</datasheet>
+      <fields>
+        <field name="Spice_Lib_File">./IFX-Power_OptiMOS_N-channel_small_signal_MOSFET_240V_250V_400V_600V_Spice-web.lib</field>
+        <field name="Spice_Model">BSS127_L0</field>
+        <field name="Spice_Netlist_Enabled">Y</field>
+        <field name="Spice_Node_Sequence">3 1 2 </field>
+        <field name="Spice_Primitive">X</field>
+      </fields>
+      <libsource lib="Transistor_FET" part="BSS127S" description="0.07A Id, 600V Vds, N-Channel MOSFET, SOT-23"/>
+      <sheetpath names="/on When Cold/" tstamps="/60855826/"/>
+      <tstamp>605BE7F9</tstamp>
+    </comp>
+    <comp ref="R16">
+      <value>4.7k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/on When Cold/" tstamps="/60855826/"/>
+      <tstamp>60855E6B</tstamp>
+    </comp>
+    <comp ref="R15">
+      <value>20k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/on When Cold/" tstamps="/60855826/"/>
+      <tstamp>605C395B</tstamp>
+    </comp>
+    <comp ref="R12">
+      <value>4.7k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/on When Cold/" tstamps="/60855826/"/>
+      <tstamp>60855E6A</tstamp>
+    </comp>
+    <comp ref="R13">
+      <value>20k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/on When Cold/" tstamps="/60855826/"/>
+      <tstamp>605C5249</tstamp>
+    </comp>
+    <comp ref="R10">
+      <value>6.8k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/on When Cold/" tstamps="/60855826/"/>
+      <tstamp>60596F01</tstamp>
+    </comp>
+    <comp ref="R14">
+      <value>1K</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/on When Cold/" tstamps="/60855826/"/>
+      <tstamp>60855E69</tstamp>
+    </comp>
+    <comp ref="R11">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/on When Cold/" tstamps="/60855826/"/>
+      <tstamp>6059781E</tstamp>
+    </comp>
+    <comp ref="Q6">
+      <value>FDD306P</value>
+      <footprint>Package_TO_SOT_SMD:TO-252-3_TabPin2</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Spice_Lib_File">./FDD306P.lib</field>
+        <field name="Spice_Model">FDD306P</field>
+        <field name="Spice_Netlist_Enabled">Y</field>
+        <field name="Spice_Node_Sequence">2 1 3</field>
+        <field name="Spice_Primitive">X</field>
+      </fields>
+      <libsource lib="Device" part="Q_PMOS_GDS" description="P-MOSFET transistor, gate/drain/source"/>
+      <sheetpath names="/on When Cold/" tstamps="/60855826/"/>
+      <tstamp>606E0DAA</tstamp>
+    </comp>
+    <comp ref="C5">
+      <value>30nF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/on When Cold/" tstamps="/60855826/"/>
+      <tstamp>60855E75</tstamp>
+    </comp>
+    <comp ref="R19">
+      <value>1k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/on When Cold/" tstamps="/60855826/"/>
+      <tstamp>607712E1</tstamp>
+    </comp>
+    <comp ref="D2">
+      <value>RB751V40T1G</value>
+      <footprint>Diode_SMD:D_SOD-323_HandSoldering</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Spice_Lib_File">RB751V40T1G.lib</field>
+        <field name="Spice_Model">rb751v40t1g</field>
+        <field name="Spice_Netlist_Enabled">Y</field>
+        <field name="Spice_Node_Sequence">2 1</field>
+        <field name="Spice_Primitive">D</field>
+      </fields>
+      <libsource lib="Device" part="D_Schottky" description="Schottky diode"/>
+      <sheetpath names="/on When Cold/" tstamps="/60855826/"/>
+      <tstamp>607B2AF9</tstamp>
+    </comp>
+    <comp ref="R20">
+      <value>100k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/on When Cold/" tstamps="/60855826/"/>
+      <tstamp>607C3729</tstamp>
+    </comp>
+    <comp ref="R18">
+      <value>1k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/on When Cold/" tstamps="/60855826/"/>
+      <tstamp>607FC873</tstamp>
+    </comp>
+    <comp ref="D1">
+      <value>RB751V40T1G</value>
+      <footprint>Diode_SMD:D_SOD-323_HandSoldering</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Spice_Lib_File">RB751V40T1G.lib</field>
+        <field name="Spice_Model">rb751v40t1g</field>
+        <field name="Spice_Netlist_Enabled">Y</field>
+        <field name="Spice_Node_Sequence">2 1</field>
+        <field name="Spice_Primitive">D</field>
+      </fields>
+      <libsource lib="Device" part="D_Schottky" description="Schottky diode"/>
+      <sheetpath names="/on When Cold/" tstamps="/60855826/"/>
+      <tstamp>607FC883</tstamp>
+    </comp>
+    <comp ref="TH3">
+      <value>10k Thermistor_NTC</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="Thermistor_NTC" description="Temperature dependent resistor, negative temperature coefficient"/>
+      <sheetpath names="/on When Cold/" tstamps="/60855826/"/>
+      <tstamp>60833A57</tstamp>
+    </comp>
+    <comp ref="C7">
+      <value>1uF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/on When Cold/" tstamps="/60855826/"/>
+      <tstamp>609CCEB1</tstamp>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Connector" part="Conn_01x04_Male">
+      <description>Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x04_Male</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_02x05_Top_Bottom">
+      <description>Generic connector, double row, 02x05, top/bottom pin numbering scheme (row 1: 1...pins_per_row, row2: pins_per_row+1 ... num_pins), script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_2x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_02x05_Top_Bottom</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+        <pin num="6" name="Pin_6" type="passive"/>
+        <pin num="7" name="Pin_7" type="passive"/>
+        <pin num="8" name="Pin_8" type="passive"/>
+        <pin num="9" name="Pin_9" type="passive"/>
+        <pin num="10" name="Pin_10" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C">
+      <description>Unpolarized capacitor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="D_Schottky">
+      <description>Schottky diode</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>TO-???*</fp>
+        <fp>*_Diode_*</fp>
+        <fp>*SingleDiode*</fp>
+        <fp>D_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">D_Schottky</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="Heater">
+      <description>Resistive heater</description>
+      <docs>~</docs>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">Heater</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="Q_PMOS_GDS">
+      <description>P-MOSFET transistor, gate/drain/source</description>
+      <docs>~</docs>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">Q_PMOS_GDS</field>
+      </fields>
+      <pins>
+        <pin num="1" name="G" type="input"/>
+        <pin num="2" name="D" type="passive"/>
+        <pin num="3" name="S" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R">
+      <description>Resistor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="Thermistor_NTC">
+      <description>Temperature dependent resistor, negative temperature coefficient</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>*NTC*</fp>
+        <fp>*Thermistor*</fp>
+        <fp>PIN?ARRAY*</fp>
+        <fp>bornier*</fp>
+        <fp>*Terminal?Block*</fp>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">TH</field>
+        <field name="Value">Thermistor_NTC</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Sensor_Temperature" part="PT100">
+      <aliases>
+        <alias>PT500</alias>
+        <alias>PT1000</alias>
+      </aliases>
+      <description>PT100 platinum temperature sensor (RTD)</description>
+      <docs>https://www.heraeus.com/media/media/group/doc_group/products_1/hst/sot_to/de_15/to_92_d.pdf</docs>
+      <footprints>
+        <fp>TO?92*</fp>
+        <fp>PIN?ARRAY*</fp>
+        <fp>bornier*</fp>
+        <fp>Terminal?Block*</fp>
+        <fp>SOD70*</fp>
+        <fp>R*1206*</fp>
+        <fp>R*0805*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">TH</field>
+        <field name="Value">PT100</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Transistor_FET" part="BSS138">
+      <aliases>
+        <alias>2N7002</alias>
+        <alias>2N7002E</alias>
+        <alias>2N7002H</alias>
+        <alias>2N7002K</alias>
+        <alias>BS170F</alias>
+        <alias>BS870</alias>
+        <alias>BSN20</alias>
+        <alias>BSS123</alias>
+        <alias>BSS127S</alias>
+        <alias>DMG2302U</alias>
+        <alias>DMG3402L</alias>
+        <alias>DMG3404L</alias>
+        <alias>DMG3406L</alias>
+        <alias>DMG3414U</alias>
+        <alias>DMG3418L</alias>
+        <alias>DMN10H220L</alias>
+        <alias>DMN10H700S</alias>
+        <alias>DMN13H750S</alias>
+        <alias>DMN2041L</alias>
+        <alias>DMN2050L</alias>
+        <alias>DMN2056U</alias>
+        <alias>DMN2058U</alias>
+        <alias>DMN2075U</alias>
+        <alias>DMN2230U</alias>
+        <alias>DMN24H11DS</alias>
+        <alias>DMN24H3D5L</alias>
+        <alias>DMN3042L</alias>
+        <alias>DMN3051L</alias>
+        <alias>DMN30H4D0L</alias>
+        <alias>DMN3110S</alias>
+        <alias>DMN3150L</alias>
+        <alias>DMN3300U</alias>
+        <alias>DMN3404L</alias>
+        <alias>DMN6075S</alias>
+        <alias>DMN6140L</alias>
+        <alias>DMN67D7L</alias>
+        <alias>DMN67D8L</alias>
+        <alias>MMBF170</alias>
+        <alias>VN10LF</alias>
+        <alias>ZVN3306F</alias>
+        <alias>ZVN3310F</alias>
+        <alias>ZVN3320F</alias>
+        <alias>ZVN4106F</alias>
+        <alias>ZXM61N02F</alias>
+        <alias>ZXM61N03F</alias>
+        <alias>ZXMN10A07F</alias>
+        <alias>ZXMN2A01F</alias>
+        <alias>ZXMN2A14F</alias>
+        <alias>ZXMN2B01F</alias>
+        <alias>ZXMN2B14FH</alias>
+        <alias>ZXMN2F30FH</alias>
+        <alias>ZXMN2F34FH</alias>
+        <alias>ZXMN3A01F</alias>
+        <alias>ZXMN3A14F</alias>
+        <alias>ZXMN3B01F</alias>
+        <alias>ZXMN3B14F</alias>
+        <alias>ZXMN3F30FH</alias>
+        <alias>ZXMN6A07F</alias>
+        <alias>IRLML0030</alias>
+        <alias>IRLML2060</alias>
+        <alias>TSM2302CX</alias>
+        <alias>AO3400A</alias>
+      </aliases>
+      <description>50V Vds, 0.22A Id, N-Channel MOSFET, SOT-23</description>
+      <docs>https://www.onsemi.com/pub/Collateral/BSS138-D.PDF</docs>
+      <footprints>
+        <fp>SOT?23*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">BSS138</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23</field>
+      </fields>
+      <pins>
+        <pin num="1" name="G" type="input"/>
+        <pin num="2" name="S" type="passive"/>
+        <pin num="3" name="D" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="cmoda7" part="CMOD-A7">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">CMOD-A7</field>
+      </fields>
+      <pins>
+        <pin num="1" name="M3" type="BiDi"/>
+        <pin num="2" name="L3" type="BiDi"/>
+        <pin num="3" name="A16" type="BiDi"/>
+        <pin num="4" name="K3" type="BiDi"/>
+        <pin num="5" name="C15" type="BiDi"/>
+        <pin num="6" name="H1" type="BiDi"/>
+        <pin num="7" name="A15" type="BiDi"/>
+        <pin num="8" name="B15" type="BiDi"/>
+        <pin num="9" name="A14" type="BiDi"/>
+        <pin num="10" name="J3" type="BiDi"/>
+        <pin num="11" name="J1" type="BiDi"/>
+        <pin num="12" name="K2" type="BiDi"/>
+        <pin num="13" name="L1" type="BiDi"/>
+        <pin num="14" name="L2" type="BiDi"/>
+        <pin num="15" name="G3*" type="input"/>
+        <pin num="16" name="H2*" type="input"/>
+        <pin num="17" name="M1" type="BiDi"/>
+        <pin num="18" name="N3" type="BiDi"/>
+        <pin num="19" name="P3" type="BiDi"/>
+        <pin num="20" name="M2" type="BiDi"/>
+        <pin num="21" name="N1" type="BiDi"/>
+        <pin num="22" name="N2" type="BiDi"/>
+        <pin num="23" name="P1" type="BiDi"/>
+        <pin num="24" name="VCC" type="power_in"/>
+        <pin num="25" name="GND" type="power_in"/>
+        <pin num="26" name="R3" type="BiDi"/>
+        <pin num="27" name="T3" type="BiDi"/>
+        <pin num="28" name="R2" type="BiDi"/>
+        <pin num="29" name="T1" type="BiDi"/>
+        <pin num="30" name="T2" type="BiDi"/>
+        <pin num="31" name="U1" type="BiDi"/>
+        <pin num="32" name="W2" type="BiDi"/>
+        <pin num="33" name="V2" type="BiDi"/>
+        <pin num="34" name="W3" type="BiDi"/>
+        <pin num="35" name="V3" type="BiDi"/>
+        <pin num="36" name="W5" type="BiDi"/>
+        <pin num="37" name="V4" type="BiDi"/>
+        <pin num="38" name="U4" type="BiDi"/>
+        <pin num="39" name="V5" type="BiDi"/>
+        <pin num="40" name="W4" type="BiDi"/>
+        <pin num="41" name="U5" type="BiDi"/>
+        <pin num="42" name="U2" type="BiDi"/>
+        <pin num="43" name="W6" type="BiDi"/>
+        <pin num="44" name="U3" type="BiDi"/>
+        <pin num="45" name="U7" type="BiDi"/>
+        <pin num="46" name="W7" type="BiDi"/>
+        <pin num="47" name="U8" type="BiDi"/>
+        <pin num="48" name="V8" type="BiDi"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Connector">
+      <uri>/usr/share/kicad/library/Connector.lib</uri>
+    </library>
+    <library logical="Connector_Generic">
+      <uri>/usr/share/kicad/library/Connector_Generic.lib</uri>
+    </library>
+    <library logical="Device">
+      <uri>/usr/share/kicad/library/Device.lib</uri>
+    </library>
+    <library logical="Sensor_Temperature">
+      <uri>/usr/share/kicad/library/Sensor_Temperature.lib</uri>
+    </library>
+    <library logical="Transistor_FET">
+      <uri>/usr/share/kicad/library/Transistor_FET.lib</uri>
+    </library>
+    <library logical="cmoda7">
+      <uri>/data/OneDrive/phdgc/DUNE/cryosub-github/hardware/uob-hep-pc068a-cryosub/cmoda7.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="/vcont">
+      <node ref="C6" pin="1"/>
+      <node ref="R22" pin="1"/>
+      <node ref="D1" pin="2"/>
+      <node ref="U1" pin="16"/>
+    </net>
+    <net code="2" name="Net-(R22-Pad2)">
+      <node ref="U1" pin="26"/>
+      <node ref="R22" pin="2"/>
+    </net>
+    <net code="3" name="+5V">
+      <node ref="R7" pin="1"/>
+      <node ref="Q3" pin="3"/>
+      <node ref="R16" pin="1"/>
+      <node ref="R12" pin="1"/>
+      <node ref="R17" pin="1"/>
+      <node ref="R10" pin="1"/>
+      <node ref="R8" pin="1"/>
+      <node ref="R3" pin="1"/>
+      <node ref="R1" pin="1"/>
+      <node ref="C2" pin="1"/>
+      <node ref="Q6" pin="3"/>
+      <node ref="C7" pin="1"/>
+      <node ref="J2" pin="1"/>
+      <node ref="J1" pin="7"/>
+    </net>
+    <net code="4" name="0">
+      <node ref="R2" pin="2"/>
+      <node ref="J1" pin="5"/>
+      <node ref="R5" pin="2"/>
+      <node ref="J1" pin="4"/>
+      <node ref="TH2" pin="2"/>
+      <node ref="J1" pin="2"/>
+      <node ref="C2" pin="2"/>
+      <node ref="C4" pin="2"/>
+      <node ref="C6" pin="2"/>
+      <node ref="R14" pin="2"/>
+      <node ref="R11" pin="2"/>
+      <node ref="C7" pin="2"/>
+      <node ref="TH3" pin="2"/>
+      <node ref="J2" pin="4"/>
+      <node ref="R20" pin="2"/>
+      <node ref="TH1" pin="2"/>
+      <node ref="R21" pin="1"/>
+      <node ref="C1" pin="2"/>
+      <node ref="U1" pin="25"/>
+    </net>
+    <net code="5" name="/usb_d-">
+      <node ref="J1" pin="1"/>
+      <node ref="J2" pin="3"/>
+    </net>
+    <net code="6" name="Net-(J1-Pad3)">
+      <node ref="J1" pin="3"/>
+    </net>
+    <net code="7" name="/usb_d+">
+      <node ref="J1" pin="6"/>
+      <node ref="J2" pin="2"/>
+    </net>
+    <net code="8" name="/vheat">
+      <node ref="U1" pin="15"/>
+      <node ref="R21" pin="2"/>
+      <node ref="C5" pin="1"/>
+      <node ref="Q6" pin="2"/>
+      <node ref="J1" pin="8"/>
+    </net>
+    <net code="9" name="Net-(J1-Pad10)">
+      <node ref="J1" pin="10"/>
+      <node ref="TH1" pin="1"/>
+      <node ref="J1" pin="9"/>
+    </net>
+    <net code="10" name="/on When Warm/VD1">
+      <node ref="R3" pin="2"/>
+      <node ref="R4" pin="1"/>
+      <node ref="R9" pin="2"/>
+      <node ref="Q1" pin="3"/>
+    </net>
+    <net code="11" name="Net-(C1-Pad1)">
+      <node ref="R23" pin="1"/>
+      <node ref="U1" pin="24"/>
+      <node ref="C1" pin="1"/>
+    </net>
+    <net code="12" name="/vfpga">
+      <node ref="Q3" pin="2"/>
+      <node ref="C4" pin="1"/>
+      <node ref="R23" pin="2"/>
+      <node ref="C3" pin="1"/>
+    </net>
+    <net code="13" name="Net-(U1-Pad34)">
+      <node ref="U1" pin="34"/>
+    </net>
+    <net code="14" name="Net-(U1-Pad27)">
+      <node ref="U1" pin="27"/>
+    </net>
+    <net code="15" name="Net-(U1-Pad28)">
+      <node ref="U1" pin="28"/>
+    </net>
+    <net code="16" name="Net-(U1-Pad29)">
+      <node ref="U1" pin="29"/>
+    </net>
+    <net code="17" name="Net-(U1-Pad3)">
+      <node ref="U1" pin="3"/>
+    </net>
+    <net code="18" name="Net-(U1-Pad30)">
+      <node ref="U1" pin="30"/>
+    </net>
+    <net code="19" name="Net-(U1-Pad31)">
+      <node ref="U1" pin="31"/>
+    </net>
+    <net code="20" name="Net-(U1-Pad32)">
+      <node ref="U1" pin="32"/>
+    </net>
+    <net code="21" name="Net-(U1-Pad33)">
+      <node ref="U1" pin="33"/>
+    </net>
+    <net code="22" name="Net-(U1-Pad35)">
+      <node ref="U1" pin="35"/>
+    </net>
+    <net code="23" name="Net-(U1-Pad36)">
+      <node ref="U1" pin="36"/>
+    </net>
+    <net code="24" name="Net-(U1-Pad37)">
+      <node ref="U1" pin="37"/>
+    </net>
+    <net code="25" name="Net-(U1-Pad38)">
+      <node ref="U1" pin="38"/>
+    </net>
+    <net code="26" name="Net-(U1-Pad39)">
+      <node ref="U1" pin="39"/>
+    </net>
+    <net code="27" name="Net-(U1-Pad4)">
+      <node ref="U1" pin="4"/>
+    </net>
+    <net code="28" name="Net-(U1-Pad40)">
+      <node ref="U1" pin="40"/>
+    </net>
+    <net code="29" name="Net-(U1-Pad41)">
+      <node ref="U1" pin="41"/>
+    </net>
+    <net code="30" name="Net-(U1-Pad42)">
+      <node ref="U1" pin="42"/>
+    </net>
+    <net code="31" name="Net-(U1-Pad1)">
+      <node ref="U1" pin="1"/>
+    </net>
+    <net code="32" name="Net-(U1-Pad10)">
+      <node ref="U1" pin="10"/>
+    </net>
+    <net code="33" name="Net-(U1-Pad11)">
+      <node ref="U1" pin="11"/>
+    </net>
+    <net code="34" name="Net-(U1-Pad12)">
+      <node ref="U1" pin="12"/>
+    </net>
+    <net code="35" name="Net-(U1-Pad13)">
+      <node ref="U1" pin="13"/>
+    </net>
+    <net code="36" name="Net-(U1-Pad14)">
+      <node ref="U1" pin="14"/>
+    </net>
+    <net code="37" name="Net-(U1-Pad17)">
+      <node ref="U1" pin="17"/>
+    </net>
+    <net code="38" name="Net-(U1-Pad18)">
+      <node ref="U1" pin="18"/>
+    </net>
+    <net code="39" name="Net-(U1-Pad19)">
+      <node ref="U1" pin="19"/>
+    </net>
+    <net code="40" name="Net-(U1-Pad2)">
+      <node ref="U1" pin="2"/>
+    </net>
+    <net code="41" name="Net-(U1-Pad20)">
+      <node ref="U1" pin="20"/>
+    </net>
+    <net code="42" name="Net-(U1-Pad21)">
+      <node ref="U1" pin="21"/>
+    </net>
+    <net code="43" name="Net-(U1-Pad22)">
+      <node ref="U1" pin="22"/>
+    </net>
+    <net code="44" name="Net-(U1-Pad23)">
+      <node ref="U1" pin="23"/>
+    </net>
+    <net code="45" name="Net-(U1-Pad44)">
+      <node ref="U1" pin="44"/>
+    </net>
+    <net code="46" name="Net-(U1-Pad43)">
+      <node ref="U1" pin="43"/>
+    </net>
+    <net code="47" name="Net-(U1-Pad45)">
+      <node ref="U1" pin="45"/>
+    </net>
+    <net code="48" name="Net-(U1-Pad46)">
+      <node ref="U1" pin="46"/>
+    </net>
+    <net code="49" name="Net-(U1-Pad47)">
+      <node ref="U1" pin="47"/>
+    </net>
+    <net code="50" name="Net-(U1-Pad48)">
+      <node ref="U1" pin="48"/>
+    </net>
+    <net code="51" name="Net-(U1-Pad5)">
+      <node ref="U1" pin="5"/>
+    </net>
+    <net code="52" name="Net-(U1-Pad6)">
+      <node ref="U1" pin="6"/>
+    </net>
+    <net code="53" name="Net-(U1-Pad7)">
+      <node ref="U1" pin="7"/>
+    </net>
+    <net code="54" name="Net-(U1-Pad8)">
+      <node ref="U1" pin="8"/>
+    </net>
+    <net code="55" name="Net-(U1-Pad9)">
+      <node ref="U1" pin="9"/>
+    </net>
+    <net code="56" name="Net-(C3-Pad2)">
+      <node ref="Q3" pin="1"/>
+      <node ref="C3" pin="2"/>
+      <node ref="R9" pin="1"/>
+    </net>
+    <net code="57" name="/on When Warm/vg1">
+      <node ref="R2" pin="1"/>
+      <node ref="R6" pin="1"/>
+      <node ref="Q1" pin="1"/>
+      <node ref="R1" pin="2"/>
+    </net>
+    <net code="58" name="/on When Warm/vd2">
+      <node ref="R6" pin="2"/>
+      <node ref="Q2" pin="3"/>
+      <node ref="R7" pin="2"/>
+    </net>
+    <net code="59" name="/on When Warm/vs">
+      <node ref="Q1" pin="2"/>
+      <node ref="R5" pin="1"/>
+      <node ref="Q2" pin="2"/>
+    </net>
+    <net code="60" name="/on When Warm/vg2">
+      <node ref="R4" pin="2"/>
+      <node ref="TH2" pin="1"/>
+      <node ref="R8" pin="2"/>
+      <node ref="Q2" pin="1"/>
+    </net>
+    <net code="61" name="Net-(D2-Pad1)">
+      <node ref="R19" pin="2"/>
+      <node ref="D2" pin="1"/>
+    </net>
+    <net code="62" name="/on When Cold/vd2">
+      <node ref="R15" pin="2"/>
+      <node ref="R16" pin="2"/>
+      <node ref="D2" pin="2"/>
+      <node ref="Q5" pin="3"/>
+    </net>
+    <net code="63" name="/on When Cold/vg3">
+      <node ref="R20" pin="1"/>
+      <node ref="R18" pin="1"/>
+      <node ref="C5" pin="2"/>
+      <node ref="R19" pin="1"/>
+      <node ref="Q6" pin="1"/>
+    </net>
+    <net code="64" name="Net-(D1-Pad1)">
+      <node ref="D1" pin="1"/>
+      <node ref="R18" pin="2"/>
+    </net>
+    <net code="65" name="/on When Cold/vd1">
+      <node ref="R12" pin="2"/>
+      <node ref="R13" pin="1"/>
+      <node ref="Q4" pin="3"/>
+    </net>
+    <net code="66" name="/on When Cold/vg2">
+      <node ref="R13" pin="2"/>
+      <node ref="TH3" pin="1"/>
+      <node ref="Q5" pin="1"/>
+      <node ref="R17" pin="2"/>
+    </net>
+    <net code="67" name="/on When Cold/vg1">
+      <node ref="R15" pin="1"/>
+      <node ref="Q4" pin="1"/>
+      <node ref="R10" pin="2"/>
+      <node ref="R11" pin="1"/>
+    </net>
+    <net code="68" name="/on When Cold/vs">
+      <node ref="R14" pin="1"/>
+      <node ref="Q5" pin="2"/>
+      <node ref="Q4" pin="2"/>
+    </net>
+  </nets>
+</export>
