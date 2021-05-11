@@ -9,8 +9,8 @@ class cryosubDB:
     def __init__(self):
         self.db = mysql.connector.connect(
             host="localhost",
-            user="phdgc",
-            password="cryosub1",
+            user="cryosub",
+            password="cryosub",
             db="cryosub"
         )
 
