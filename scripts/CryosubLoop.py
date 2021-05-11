@@ -35,12 +35,17 @@ def testAction():
     measuredTemperature = tsens.getTemp()
     logging.info("Temp = %f"%(measuredTemperature));
 
+    psuControl = False
     # Set the PSU voltage/current
-    psu.setCurrent(demandCurrent)    
-    psu.setVoltage(demandVoltage)
+    if psuControl:
+        psu.setCurrent(demandCurrent)    
+        psu.setVoltage(demandVoltage)
 
-    measuredVoltage = psu.getVoltage()
-    measuredCurrent = psu.getCurrent()
+        measuredVoltage = psu.getVoltage()
+        measuredCurrent = psu.getCurrent()
+    else:
+        measuredVoltage = 0.0
+        measuredCurrent = 0.0
 
     # write the current state into the database
     db.writeMeasuredValues(demandCurrent,demandVoltage,measuredCurrent,measuredVoltage,measuredTemperature)
