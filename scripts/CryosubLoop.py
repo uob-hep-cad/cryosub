@@ -19,7 +19,8 @@ import cryosubTemp
 import cryosubPSU
 import cryosubDB
 
-logFileName = "/home/phdgc/cryosub_logfile.log"
+
+logFileName = os.getenv("HOME") + "/cryosub_logfile.log"
 
 logging.basicConfig(filename=logFileName, level=logging.INFO)
 

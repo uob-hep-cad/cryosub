@@ -10,11 +10,15 @@ class cryosubPSU:
     def __init__(self,PSUAddress,outputChannel):
         """Set up connection to PSU"""
 
-        self.con = usbtmc.Instrument(0x0483, 0x7540)
+        realPSU = False
+        if realPSU:
+            self.con = usbtmc.Instrument(0x0483, 0x7540)
 
-        self.con.write_raw(b"*IDN?")
-        time.sleep(0.1) # Muhahahaha
-        id = self.con.read_raw()
+            self.con.write_raw(b"*IDN?")
+            time.sleep(0.1) # Muhahahaha
+            id = self.con.read_raw()
+        else:
+            id = b"Dummy"
 
         logging.info("PSU ID = %s"%(id.decode('utf-8')))
 
