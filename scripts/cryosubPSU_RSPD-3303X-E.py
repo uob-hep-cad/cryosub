@@ -7,26 +7,26 @@ import time
 class cryosubPSU:
     """Functions for accessing RS-Pro D-3303X-E  PSU over USB"""
     
-    def w_psu(instr, str):
+    def w_psu(self, instr, str):
         instr.write_raw(str.encode('utf-8'))
         time.sleep(0.1)
 
-    def wr_psu(instr, str):
+    def wr_psu(self, instr, str):
         self.w_psu(instr, str)
         return instr.read_raw().decode('utf-8')
 
-    def __init__(self,PSUAddress,outputChannel):
+    def __init__(self,outputChannel,realPSU):
         """Set up connection to PSU"""
 
         setChannelCommand = "INST CH%d"%(outputChannel)
         logging.info("set channel command = %s"%(setChannelCommand))
 
-        realPSU = False
+        # realPSU = True
         if realPSU:
             self.con = usbtmc.Instrument(0x0483, 0x7540)
 
             id = self.wr_psu(self.con, "*IDN?")
-            self.w_psu(setChannelCommand)
+            self.w_psu(self.con,setChannelCommand)
 
         else:
             id = "Dummy"
@@ -34,17 +34,24 @@ class cryosubPSU:
         logging.info("PSU ID = %s"%(id))
 
         self.outputChannel = outputChannel
-        
 
-        
+        turnOnPSU = True
+        if turnOnPSU:
+            turnOnCommand = "OUTP CH%d,ON"%(outputChannel)
+            logging.info("Turn on command = %s"%(turnOnCommand))
+            self.w_psu(self.con, turnOnCommand)
+        else:
+            logging.info("turnOnPSU set false. NOT turning on PSU")
+
+
     def getVoltage(self):
         """Get output voltage from PSU"""
 
-        command = "MEAS:VOLT?"%(self.outputChannel)
+        command = "MEAS:VOLT?"
 
         logging.info("getVoltage command = %s"%(command))
         
-        result = wr_psu(self.con, command ).strip()
+        result = self.wr_psu(self.con, command ).strip()
 
         num = float(result.strip("\n").strip("V"))
 
@@ -62,7 +69,7 @@ class cryosubPSU:
     def getCurrent(self):
         """Get output current from PSU"""
 
-        command = "MEAS:CURR?"%(self.outputChannel)
+        command = "MEAS:CURR?"
 
         logging.info("getCurrent command = %s"%(command))
 
@@ -77,8 +84,12 @@ class cryosubPSU:
 
     def setCurrent(self,current):
         """Set demand current"""
-        command = "CURR %f"%(voltage)
+        command = "CURR %f"%(current)
         logging.info("setCurrent command = %s"%(command))
         self.w_psu(self.con , command )
 
-    
+    def closePSU(self):
+        """Disconnect from PSU"""
+        logging.info("closing USB connection to PSU")
+        self.con.close()
+

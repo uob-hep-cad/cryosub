@@ -11,8 +11,8 @@ import matplotlib.pyplot as plt
 
 conn = mysql.connector.connect(
     host="localhost",
-    user="phdgc",
-    password="cryosub1",
+    user="cryosub",
+    password="cryosub",
     db="cryosub"
 )
 

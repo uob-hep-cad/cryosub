@@ -26,6 +26,7 @@ logging.basicConfig(filename=logFileName, level=logging.INFO)
 
 logging.info("""Logile for temp/current/voltage montoring for CryoSub""")
 
+
 #################################################################
 #def testAction(db,psu,temp):
 def testAction():
@@ -36,7 +37,7 @@ def testAction():
     measuredTemperature = tsens.getTemp()
     logging.info("Temp = %f"%(measuredTemperature));
 
-    psuControl = False
+    psuControl = True
     # Set the PSU voltage/current
     if psuControl:
         psu.setCurrent(demandCurrent)    
@@ -55,9 +56,9 @@ def testAction():
 
 #################################################################
 
-psuGpibAddr = 1
-psuOutputChan = 2
-psu = cryosubPSU.cryosubPSU(psuGpibAddr,psuOutputChan)
+realPSU = True
+psuOutputChan = 1
+psu = cryosubPSU.cryosubPSU(psuOutputChan,realPSU)
 
 tsens = cryosubTemp.cryosubTemp()
 

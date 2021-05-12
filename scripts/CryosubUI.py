@@ -13,7 +13,7 @@ import sys
 import cryosubDB
 
 # set up logging
-logFileName = "${HOME}/cryosub_logfile.log"
+logFileName = os.getenv("HOME") + "/cryosub_logfile.log"
 logging.basicConfig(filename=logFileName, level=logging.INFO)
 logging.info("""UI for CryoSub""")
 
@@ -29,9 +29,9 @@ print("Enter desired voltage (q to exit , s to start a run, t to terminate a run
 for line in sys.stdin: 
     if 'q' == line.rstrip(): 
         break
-    elif line = 's':
+    elif line == 's':
         print ("Got start run command. Doing nothing")
-    elif line = 't':
+    elif line == 't':
         print ("Got terminate run command. Doing nothing")
 
     try:
