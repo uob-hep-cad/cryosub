@@ -13,7 +13,7 @@ import cryosubDB
 import time
 
 # set up logging
-logFileName = "/home/phdgc/cryosub_logfile.log"
+logFileName = "${HOME}/cryosub_logfile.log"
 logging.basicConfig(filename=logFileName, level=logging.INFO)
 logging.info("""Display for CryoSub""")
 

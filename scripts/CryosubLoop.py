@@ -19,11 +19,13 @@ import cryosubTemp
 import cryosubPSU
 import cryosubDB
 
-logFileName = "/home/phdgc/cryosub_logfile.log"
+
+logFileName = os.getenv("HOME") + "/cryosub_logfile.log"
 
 logging.basicConfig(filename=logFileName, level=logging.INFO)
 
 logging.info("""Logile for temp/current/voltage montoring for CryoSub""")
+
 
 #################################################################
 #def testAction(db,psu,temp):
@@ -35,12 +37,17 @@ def testAction():
     measuredTemperature = tsens.getTemp()
     logging.info("Temp = %f"%(measuredTemperature));
 
+    psuControl = True
     # Set the PSU voltage/current
-    psu.setCurrent(demandCurrent)    
-    psu.setVoltage(demandVoltage)
+    if psuControl:
+        psu.setCurrent(demandCurrent)    
+        psu.setVoltage(demandVoltage)
 
-    measuredVoltage = psu.getVoltage()
-    measuredCurrent = psu.getCurrent()
+        measuredVoltage = psu.getVoltage()
+        measuredCurrent = psu.getCurrent()
+    else:
+        measuredVoltage = 0.0
+        measuredCurrent = 0.0
 
     # write the current state into the database
     db.writeMeasuredValues(demandCurrent,demandVoltage,measuredCurrent,measuredVoltage,measuredTemperature)
@@ -49,9 +56,9 @@ def testAction():
 
 #################################################################
 
-psuGpibAddr = 1
-psuOutputChan = 2
-psu = cryosubPSU.cryosubPSU(psuGpibAddr,psuOutputChan)
+realPSU = True
+psuOutputChan = 1
+psu = cryosubPSU.cryosubPSU(psuOutputChan,realPSU)
 
 tsens = cryosubTemp.cryosubTemp()
 
