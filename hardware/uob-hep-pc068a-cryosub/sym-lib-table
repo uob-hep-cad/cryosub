@@ -1,3 +1,4 @@
 (sym_lib_table
   (lib (name kicad_cryosub_simlib)(type Legacy)(uri ${KIPRJMOD}/kicad_cryosub_simlib.lib)(options "")(descr ""))
+  (lib (name local_kicad_symbol_Library)(type Legacy)(uri ${KIPRJMOD}/local_kicad_symbol_Library.lib)(options "")(descr ""))
 )
