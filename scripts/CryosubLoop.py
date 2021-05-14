@@ -37,6 +37,11 @@ def testAction():
     measuredTemperature = tsens.getTemp()
     logging.info("Temp = %f"%(measuredTemperature));
 
+    tempLimit = 25
+    if (measuredTemperature > tempLimit):
+        demandCurrent = 0.0
+        demandVoltage = 0.0
+
     psuControl = True
     # Set the PSU voltage/current
     if psuControl:
@@ -57,7 +62,7 @@ def testAction():
 #################################################################
 
 realPSU = True
-psuOutputChan = 1
+psuOutputChan = 2
 psu = cryosubPSU.cryosubPSU(psuOutputChan,realPSU)
 
 tsens = cryosubTemp.cryosubTemp()

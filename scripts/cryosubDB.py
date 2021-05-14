@@ -62,3 +62,11 @@ class cryosubDB:
         dbCursor.close()
         
         return row
+
+   #########################################################################                                                                                                                                
+    def readRunInfo(self):
+
+        self.dbCursor.execute("""select * from RunInfo  where runNumber=(select max(runNumber) from RunInfo);""");
+        row = self.dbCursor.fetchone()
+
+        return row
