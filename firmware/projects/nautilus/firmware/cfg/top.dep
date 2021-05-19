@@ -1,0 +1,8 @@
+@device_family = "artix7"
+@device_name = "xc7a35t"
+@device_package = "cpg236"
+@device_speed = "-1"
+@boardname = "nautilus"
+
+src top.vhd
+src ../ucf/nautilus.tcl
