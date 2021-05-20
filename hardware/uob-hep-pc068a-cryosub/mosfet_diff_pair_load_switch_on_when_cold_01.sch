@@ -20,7 +20,7 @@ L Device:R R7
 U 1 1 60597D14
 P 6750 3400
 F 0 "R7" H 6820 3445 50  0000 L CNN
-F 1 "6.8k" H 6820 3355 50  0000 L CNN
+F 1 "10k" H 6820 3355 50  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 6680 3400 50  0001 C CNN
 F 3 "~" H 6750 3400 50  0001 C CNN
 	1    6750 3400
@@ -51,22 +51,6 @@ Wire Wire Line
 Connection ~ 5800 3850
 Wire Wire Line
 	4450 3600 5800 3600
-$Comp
-L Transistor_FET:BSS127S Q2
-U 1 1 605C1A8E
-P 5350 3850
-F 0 "Q2" H 5555 3895 50  0000 L CNN
-F 1 "BSS127S" H 5555 3805 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-23" H 5550 3775 50  0001 L CIN
-F 3 "http://www.diodes.com/assets/Datasheets/BSS127.pdf" H 5350 3850 50  0001 L CNN
-F 4 "X" H 5350 3850 50  0001 C CNN "Spice_Primitive"
-F 5 "BSS127_L0" H 5350 3850 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 5350 3850 50  0001 C CNN "Spice_Netlist_Enabled"
-F 7 "./IFX-Power_OptiMOS_N-channel_small_signal_MOSFET_240V_250V_400V_600V_Spice-web.lib" H 5350 3850 50  0001 C CNN "Spice_Lib_File"
-F 8 "3 1 2" H 5350 3850 50  0001 C CNN "Spice_Node_Sequence"
-	1    5350 3850
-	-1   0    0    -1  
-$EndComp
 Connection ~ 4550 4850
 Wire Wire Line
 	2450 2900 2450 3900
@@ -99,22 +83,6 @@ vg2
 Wire Wire Line
 	5250 3450 5250 3650
 Connection ~ 5250 3450
-$Comp
-L Transistor_FET:BSS127S Q1
-U 1 1 605BE7F9
-P 3850 3850
-F 0 "Q1" H 4055 3895 50  0000 L CNN
-F 1 "BSS127S" H 4055 3805 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-23" H 4050 3775 50  0001 L CIN
-F 3 "http://www.diodes.com/assets/Datasheets/BSS127.pdf" H 3850 3850 50  0001 L CNN
-F 4 "X" H 3850 3850 50  0001 C CNN "Spice_Primitive"
-F 5 "BSS127_L0" H 3850 3850 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 3850 3850 50  0001 C CNN "Spice_Netlist_Enabled"
-F 7 "./IFX-Power_OptiMOS_N-channel_small_signal_MOSFET_240V_250V_400V_600V_Spice-web.lib" H 3850 3850 50  0001 C CNN "Spice_Lib_File"
-F 8 "3 1 2 " H 3850 3850 50  0001 C CNN "Spice_Node_Sequence"
-	1    3850 3850
-	1    0    0    -1  
-$EndComp
 $Comp
 L Device:R R5
 U 1 1 605937CE
@@ -203,7 +171,7 @@ L Device:R R1
 U 1 1 60596F01
 P 3350 3400
 F 0 "R1" H 3420 3445 50  0000 L CNN
-F 1 "6.8k" H 3420 3355 50  0000 L CNN
+F 1 "10k" H 3420 3355 50  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 3280 3400 50  0001 C CNN
 F 3 "~" H 3350 3400 50  0001 C CNN
 	1    3350 3400
@@ -221,7 +189,7 @@ L Device:R R4
 U 1 1 60592A8B
 P 4550 4500
 F 0 "R4" H 4620 4545 50  0000 L CNN
-F 1 "1K" H 4620 4455 50  0000 L CNN
+F 1 "2k" H 4620 4455 50  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 4480 4500 50  0001 C CNN
 F 3 "~" H 4550 4500 50  0001 C CNN
 	1    4550 4500
@@ -525,4 +493,36 @@ Wire Wire Line
 	10850 4850 10850 4500
 Text Label 10850 4500 0    50   ~ 0
 vcont
+$Comp
+L kicad_cryosub_simlib:IRLML2402TR Q1
+U 1 1 60A01665
+P 3850 3850
+F 0 "Q1" H 4054 4123 50  0000 L CNN
+F 1 "IRLML2402TR" H 4054 4032 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 4050 3775 50  0001 L CIN
+F 3 "https://docs.rs-online.com/c4e5/0900766b80afb7ed.pdf" H 3850 3850 50  0001 L CNN
+F 4 "X" H 4054 3941 50  0000 L CNN "Spice_Primitive"
+F 5 "irlml2402" H 4054 3850 50  0000 L CNN "Spice_Model"
+F 6 "Y" H 4054 3759 50  0000 L CNN "Spice_Netlist_Enabled"
+F 7 "3 1 2" H 4054 3668 50  0000 L CNN "Spice_Node_Sequence"
+F 8 "irlml2402.lib" H 4054 3577 50  0000 L CNN "Spice_Lib_File"
+	1    3850 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L kicad_cryosub_simlib:IRLML2402TR Q2
+U 1 1 60A0FCD3
+P 5350 3850
+F 0 "Q2" H 5555 4123 50  0000 L CNN
+F 1 "IRLML2402TR" H 5555 4032 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 5550 3775 50  0001 L CIN
+F 3 "https://docs.rs-online.com/c4e5/0900766b80afb7ed.pdf" H 5350 3850 50  0001 L CNN
+F 4 "X" H 5555 3941 50  0000 L CNN "Spice_Primitive"
+F 5 "irlml2402" H 5555 3850 50  0000 L CNN "Spice_Model"
+F 6 "Y" H 5555 3759 50  0000 L CNN "Spice_Netlist_Enabled"
+F 7 "3 1 2" H 5555 3668 50  0000 L CNN "Spice_Node_Sequence"
+F 8 "irlml2402.lib" H 5555 3577 50  0000 L CNN "Spice_Lib_File"
+	1    5350 3850
+	-1   0    0    -1  
+$EndComp
 $EndSCHEMATC
