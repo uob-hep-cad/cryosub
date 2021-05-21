@@ -17,7 +17,7 @@ logFileName = os.getenv("HOME") + "/cryosub_logfile.log"
 logging.basicConfig(filename=logFileName, level=logging.INFO)
 logging.info("""UI for CryoSub""")
 
-maxCurrent = 0.5
+maxCurrent = 2.0
 
 # connect to database
 db = cryosubDB.cryosubDB()
