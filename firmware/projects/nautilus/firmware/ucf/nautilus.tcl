@@ -16,8 +16,10 @@ proc false_path {patt clk} {
 # System clock (12MHz)
 create_clock -period 83.33 -name sysclk [get_ports clk]
 
-set_property IOSTANDARD LVCMOS_33 [get_ports {clk rx tx htrn]]
+set_property IOSTANDARD LVCMOS33 [get_ports {clk rx tx htrn ramcen qspi_cs}]
 set_property PACKAGE_PIN L17 [get_ports clk]
-set_property PACKAGE_PIN J18 [get_ports rx]
-set_property PACKAGE_PIN J17 [get_ports tx]
+set_property PACKAGE_PIN J18 [get_ports tx]
+set_property PACKAGE_PIN J17 [get_ports rx]
 set_property PACKAGE_PIN R3 [get_ports htrn]
+set_property PACKAGE_PIN N19 [get_ports ramcen]
+set_property PACKAGE_PIN K19 [get_ports qspi_cs]
