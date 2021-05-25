@@ -17,9 +17,9 @@ CryosubSet.py - sets demand values
 
 CryosubDisplay - displays values in database.
 
-Uses a mysql database "cryosub" . passwd = cryosub1
+Uses a mysql database "cryosub" . passwd = cryosub
 
-mysql -u phdgc -h localhost -p cryosub
+ mysql -u cryosub -pcryosub cryosub
 
 mysql> select * from measuredData;
 
