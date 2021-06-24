@@ -56,15 +56,15 @@ begin
 			o => clki
 		);
 		
-	xadc : xadc_wiz_0
+	xadc: xadc_wiz_default
 		PORT MAP (
-			di_in => X"0000",
-			daddr_in => "000000",
+			di_in => std_logic_vector'(X"0000"),
+			daddr_in => std_logic_vector'("000000"),
 			den_in => '0',
 			dwe_in => '0',
 			drdy_out => open,
 			do_out => open,
-			dclk_in => clki
+			dclk_in => clki,
 			vp_in => '0',
 			vn_in => '0',
 			channel_out => open,
