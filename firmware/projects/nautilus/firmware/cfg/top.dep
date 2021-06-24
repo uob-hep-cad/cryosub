@@ -5,5 +5,5 @@
 @boardname = "nautilus"
 
 src top.vhd
-include -c components/uart-for-fpga uart.dep
+include -c firmware/components/uart-for-fpga uart.dep
 src ../ucf/nautilus.tcl
