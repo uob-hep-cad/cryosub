@@ -6,4 +6,5 @@
 
 src top.vhd
 include -c firmware/components/uart-for-fpga uart.dep
+src ../cgn/xadc_wiz_default.xci
 src ../ucf/nautilus.tcl

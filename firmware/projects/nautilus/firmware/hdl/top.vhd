@@ -46,27 +46,34 @@ architecture rtl of top is
 
 begin
 	
-	ramcen <= '1'; -- Turn off the SRAM
-	qspi_cs <= '1'; -- Turn off the flash
+	ramcen <= '1'; -- Turn off SRAM
+	qspi_cs <= '1'; -- Turn off flash
+	htrn <= '1'; -- Turn off heater
 
-	xadc : xadc_wiz_0
-		PORT MAP (
-			vp_in => '0',
-			vn_in => '0',
-			user_temp_alarm_out => htrn,
-			channel_out => open,
-			eoc_out => open,
-			alarm_out => open,
-			eos_out => open,
-			busy_out => open
-		);
-		
 	bufg_0: BUFG
 		port map(
 			i => clk,
 			o => clki
 		);
 		
+	xadc : xadc_wiz_0
+		PORT MAP (
+			di_in => X"0000",
+			daddr_in => "000000",
+			den_in => '0',
+			dwe_in => '0',
+			drdy_out => open,
+			do_out => open,
+			dclk_in => clki
+			vp_in => '0',
+			vn_in => '0',
+			channel_out => open,
+			eoc_out => open,
+			alarm_out => open,
+			eos_out => open,
+			busy_out => open
+		);
+	
 	uart_0: entity work.uart
 		generic map(
 			CLK_FREQ => 12e6,
