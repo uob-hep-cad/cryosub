@@ -43,6 +43,9 @@ architecture rtl of top is
     signal clki: std_logic;
     signal d: std_logic_vector(7 downto 0);
     signal v: std_logic;
+    signal drp_di, drp_do: std_logic_vector(15 downto 0);
+    signal drp_daddr: std_logic_vector(6 downto 0);
+    signal drp_den, drp_dwe, drp_drdy: std_logic;
 
 begin
 	
@@ -58,12 +61,12 @@ begin
 		
 	xadc: xadc_wiz_default
 		PORT MAP (
-			di_in => std_logic_vector'(X"0000"),
-			daddr_in => std_logic_vector'("000000"),
-			den_in => '0',
-			dwe_in => '0',
-			drdy_out => open,
-			do_out => open,
+			di_in => drp_di,
+			daddr_in => drp_daddr,
+			den_in => drp_den,
+			dwe_in => drp_dwe,
+			drdy_out => drp_drdy,
+			do_out => drp_do,
 			dclk_in => clki,
 			vp_in => '0',
 			vn_in => '0',
@@ -73,6 +76,20 @@ begin
 			eos_out => open,
 			busy_out => open
 		);
+		
+	sm_0: entity work.sm
+		port map(
+			clk => clki,
+			d => d,
+			v => v,
+			di_out => drp_di,
+			daddr_out => drp_daddr,
+			den_out => drp_den,
+			dwe_out => drp_dwe,
+			drdy_in => drp_drdy,
+			do_in => drp_do
+		);
+			
 	
 	uart_0: entity work.uart
 		generic map(
@@ -87,8 +104,8 @@ begin
 			din => d,
 			din_vld => v,
 			din_rdy => open,
-			dout => d,
-			dout_vld => v,
+			dout => open,
+			dout_vld => open,
 			frame_error => open,
 			parity_error => open
 		);	
