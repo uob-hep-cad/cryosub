@@ -55,13 +55,13 @@ begin
 			busy_out => open
 		);
 		
-	bufg: BUFG
+	bufg_0: BUFG
 		port map(
 			i => clk,
 			o => clki
 		);
 		
-	uart: work.uart
+	uart_0: entity work.uart
 		generic map(
 			CLK_FREQ => 12e6,
 			BAUD_RATE => 9600
