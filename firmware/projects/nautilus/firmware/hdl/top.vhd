@@ -21,11 +21,17 @@ end top;
 
 architecture rtl of top is
 
-    COMPONENT xadc_wiz_0
+    COMPONENT xadc_wiz_default
       PORT (
+        di_in : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+        daddr_in : IN STD_LOGIC_VECTOR(6 DOWNTO 0);
+        den_in : IN STD_LOGIC;
+        dwe_in : IN STD_LOGIC;
+        drdy_out : OUT STD_LOGIC;
+        do_out : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+        dclk_in : IN STD_LOGIC;
         vp_in : IN STD_LOGIC;
         vn_in : IN STD_LOGIC;
-        user_temp_alarm_out : OUT STD_LOGIC;
         channel_out : OUT STD_LOGIC_VECTOR(4 DOWNTO 0);
         eoc_out : OUT STD_LOGIC;
         alarm_out : OUT STD_LOGIC;
