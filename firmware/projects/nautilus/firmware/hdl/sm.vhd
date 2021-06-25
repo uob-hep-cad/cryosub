@@ -32,6 +32,9 @@ architecture rtl of sm is
 	type state_type is (ST_RST, ST_RD, ST_RD_WAIT, ST_WR_A, ST_WR_B);
 	signal state: state_type := ST_RST;
 	
+	attribute mark_debug : string;
+	attribute mark_debug of state, den_out, do_in, rdy, d, v: signal is "true";
+	
 begin
 		
 	process(clk)

@@ -19,7 +19,6 @@ entity top is port(
 
 end top;
 
-
 architecture rtl of top is
 
     COMPONENT xadc_wiz_default
@@ -105,7 +104,7 @@ begin
 			uart_rxd => rx,
 			din => d,
 			din_vld => v,
-			din_rdy => open,
+			din_rdy => rdy,
 			dout => open,
 			dout_vld => open,
 			frame_error => open,
