@@ -10,7 +10,7 @@ use ieee.std_logic_misc.all;
 library unisim;
 use unisim.VComponents.all;
 
-entity top is port(
+entity sm is port(
 		clk: in std_logic;
 		d: out std_logic_vector(7 downto 0);
 		v: out std_logic;
@@ -23,9 +23,9 @@ entity top is port(
 		do_in: in std_logic_vector(15 downto 0)
 	);
 
-end top;
+end sm;
 
-architecture rtl of top is
+architecture rtl of sm is
 
 	signal ctr: unsigned(22 downto 0) := (others => '0');
 	
