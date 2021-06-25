@@ -53,7 +53,7 @@ begin
 					state <= ST_RD_WAIT;
 				when ST_RD_WAIT =>
 					if drdy_in = '1' then
-						state <= ST_WR;
+						state <= ST_WR_A;
 					end if;
 				when ST_WR_A =>
 					if rdy = '1' then

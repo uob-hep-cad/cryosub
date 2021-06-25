@@ -19,6 +19,7 @@ entity top is port(
 
 end top;
 
+
 architecture rtl of top is
 
     COMPONENT xadc_wiz_default
@@ -42,7 +43,7 @@ architecture rtl of top is
     
     signal clki: std_logic;
     signal d: std_logic_vector(7 downto 0);
-    signal v: std_logic;
+    signal v, rdy: std_logic;
     signal drp_di, drp_do: std_logic_vector(15 downto 0);
     signal drp_daddr: std_logic_vector(6 downto 0);
     signal drp_den, drp_dwe, drp_drdy: std_logic;
@@ -82,6 +83,7 @@ begin
 			clk => clki,
 			d => d,
 			v => v,
+			rdy => rdy,
 			di_out => drp_di,
 			daddr_out => drp_daddr,
 			den_out => drp_den,
