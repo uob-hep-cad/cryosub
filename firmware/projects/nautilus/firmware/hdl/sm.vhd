@@ -67,6 +67,11 @@ begin
 		end if;
 	end process;
 	
+	di_out <= (others => '0');
+	daddr_out <= (others => '0');
+	den_out <= '1' when state = ST_RD else '0';
+	dwe_out <= '0';
+	
 	d <= do_in(15 downto 8) when state = ST_WR_A else do_in(7 downto 0);
 	v <= '1' when state = ST_WR_A or state = ST_WR_B else '0';
 
