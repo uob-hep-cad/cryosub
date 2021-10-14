@@ -1,3 +1,0 @@
-[submodule "hardware/KiCad-Spice-Library"]
-	path = hardware/KiCad-Spice-Library
-	url = https://github.com/kicad-spice-library/KiCad-Spice-Library.git

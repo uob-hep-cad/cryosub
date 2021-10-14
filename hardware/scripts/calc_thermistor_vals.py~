@@ -1,7 +1,1 @@
-#!/usr/bin/python
-import math
-
-def rt(R0,beta,T):
-    T0 = 298.15
-    r = R0*math.exp(beta(1/T - 1/T0)
-    return r
+{"error":{"code":"activityLimitReached","message":"The request has been throttled","innerError":{"code":"throttledRequest","innerError":{"code":"quota"},"date":"2021-05-30T18:08:40","request-id":"88432472-22dd-49f5-9c52-e24eb7ead44f","client-request-id":"88432472-22dd-49f5-9c52-e24eb7ead44f"}}}

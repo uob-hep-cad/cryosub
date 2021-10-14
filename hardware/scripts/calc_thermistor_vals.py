@@ -1,18 +1,1 @@
-#!/usr/bin/python
-import math
-
-def rt(R0,beta,T):
-    T0 = 298.15
-    #print(T)
-    r = R0*math.exp(beta*(1/T - 1/T0))
-    #print(r)
-    return r
-
-for temp in range(100,330):
-    print (temp,rt( R0=10000 , beta=3370, T=temp))
-
-T0Cent = 273.15
-
-print ("Rt at -25 degC = ",rt( R0=10000 , beta=3370, T=T0Cent-25))
-
-print ("Rt at +20 degC = ",rt( R0=10000 , beta=3370, T=T0Cent+20))
+{"error":{"code":"activityLimitReached","message":"The request has been throttled","innerError":{"code":"throttledRequest","innerError":{"code":"quota"},"date":"2021-05-30T18:08:40","request-id":"758c6afa-091e-427a-978a-12347456a1b3","client-request-id":"758c6afa-091e-427a-978a-12347456a1b3"}}}
