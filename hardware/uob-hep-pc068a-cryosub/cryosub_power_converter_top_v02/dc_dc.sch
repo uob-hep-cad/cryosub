@@ -1,0 +1,206 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 3 3
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text HLabel 3100 3050 0    50   Input ~ 0
+vin
+Text HLabel 9600 3050 2    50   Output ~ 0
+vout
+Text HLabel 6550 4600 0    50   BiDi ~ 0
+gnd
+$Comp
+L R-78AA3.3-0.5SMD-R:R-78AA3.3-0.5SMD-R PS1
+U 1 1 618CB14D
+P 5600 3250
+F 0 "PS1" H 5600 3717 50  0000 C CNN
+F 1 "R-78AA3.3-0.5SMD-R" H 5600 3626 50  0000 C CNN
+F 2 "R-78AA3.3-0.5SMD-R:CONV_R-78AA3.3-0.5SMD-R" H 5600 3250 50  0001 L BNN
+F 3 "" H 5600 3250 50  0001 L BNN
+F 4 "5/2019" H 5600 3250 50  0001 L BNN "PARTREV"
+F 5 "RECOM" H 5600 3250 50  0001 L BNN "MANUFACTURER"
+F 6 "9.24mm" H 5600 3250 50  0001 L BNN "MAXIMUM_PACKAGE_HEIGHT"
+F 7 "Manufacturer Recommendations" H 5600 3250 50  0001 L BNN "STANDARD"
+	1    5600 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:L_Core_Ferrite L1
+U 1 1 618D805B
+P 4100 3050
+F 0 "L1" V 3919 3050 50  0000 C CNN
+F 1 "4.7uH" V 4010 3050 50  0000 C CNN
+F 2 "Inductor_SMD:L_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 4100 3050 50  0001 C CNN
+F 3 "~" H 4100 3050 50  0001 C CNN
+	1    4100 3050
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:L_Core_Ferrite L2
+U 1 1 618D8314
+P 7800 3050
+F 0 "L2" V 7619 3050 50  0000 C CNN
+F 1 "4.7uH" V 7710 3050 50  0000 C CNN
+F 2 "Inductor_SMD:L_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 7800 3050 50  0001 C CNN
+F 3 "~" H 7800 3050 50  0001 C CNN
+	1    7800 3050
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C7
+U 1 1 618D86D8
+P 4450 3400
+F 0 "C7" H 4565 3446 50  0000 L CNN
+F 1 "10uF" H 4565 3355 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 4488 3250 50  0001 C CNN
+F 3 "~" H 4450 3400 50  0001 C CNN
+	1    4450 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C8
+U 1 1 618D88A3
+P 7200 3600
+F 0 "C8" H 7315 3646 50  0000 L CNN
+F 1 "10uF" H 7315 3555 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 7238 3450 50  0001 C CNN
+F 3 "~" H 7200 3600 50  0001 C CNN
+	1    7200 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C9
+U 1 1 618D8BB8
+P 8400 3550
+F 0 "C9" H 8515 3596 50  0000 L CNN
+F 1 "10uF" H 8515 3505 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 8438 3400 50  0001 C CNN
+F 3 "~" H 8400 3550 50  0001 C CNN
+	1    8400 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R11
+U 1 1 618D8E37
+P 6600 3350
+F 0 "R11" H 6670 3396 50  0000 L CNN
+F 1 "R" H 6670 3305 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 6530 3350 50  0001 C CNN
+F 3 "~" H 6600 3350 50  0001 C CNN
+	1    6600 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R12
+U 1 1 618DAEB3
+P 6600 3900
+F 0 "R12" H 6670 3946 50  0000 L CNN
+F 1 "R" H 6670 3855 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 6530 3900 50  0001 C CNN
+F 3 "~" H 6600 3900 50  0001 C CNN
+	1    6600 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D D2
+U 1 1 618DCDC5
+P 5700 2300
+F 0 "D2" H 5700 2517 50  0000 C CNN
+F 1 "RB522ES-30T15R" H 5700 2426 50  0000 C CNN
+F 2 "Diode_SMD:D_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 5700 2300 50  0001 C CNN
+F 3 "~" H 5700 2300 50  0001 C CNN
+	1    5700 2300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3100 3050 3950 3050
+Wire Wire Line
+	4250 3050 4450 3050
+Wire Wire Line
+	7950 3050 8400 3050
+Wire Wire Line
+	8400 3050 8400 3400
+Wire Wire Line
+	4450 3250 4450 3050
+Connection ~ 4450 3050
+Wire Wire Line
+	4450 3050 4850 3050
+Wire Wire Line
+	4450 3550 4450 4250
+Wire Wire Line
+	4450 4250 6200 4250
+Wire Wire Line
+	6600 4250 6600 4050
+Wire Wire Line
+	6600 3750 6600 3650
+Wire Wire Line
+	6200 3450 6200 4250
+Connection ~ 6200 4250
+Wire Wire Line
+	6200 4250 6550 4250
+Wire Wire Line
+	6200 3250 6350 3250
+Wire Wire Line
+	6350 3250 6350 3650
+Wire Wire Line
+	6350 3650 6600 3650
+Connection ~ 6600 3650
+Wire Wire Line
+	6600 3650 6600 3500
+Wire Wire Line
+	6600 3200 6600 3050
+Connection ~ 6600 3050
+Wire Wire Line
+	6600 3050 7200 3050
+Wire Wire Line
+	7200 3450 7200 3050
+Connection ~ 7200 3050
+Wire Wire Line
+	7200 3050 7650 3050
+Wire Wire Line
+	8400 3700 8400 4250
+Wire Wire Line
+	8400 4250 7200 4250
+Connection ~ 6600 4250
+Wire Wire Line
+	6550 4600 6550 4250
+Connection ~ 6550 4250
+Wire Wire Line
+	6550 4250 6600 4250
+Wire Wire Line
+	7200 3750 7200 4250
+Connection ~ 7200 4250
+Wire Wire Line
+	7200 4250 6600 4250
+Wire Wire Line
+	8400 3050 9600 3050
+Connection ~ 8400 3050
+Wire Wire Line
+	5850 2300 6300 2300
+Wire Wire Line
+	6300 2300 6300 3050
+Wire Wire Line
+	6200 3050 6300 3050
+Connection ~ 6300 3050
+Wire Wire Line
+	6300 3050 6600 3050
+Connection ~ 4850 3050
+Wire Wire Line
+	4850 3050 5000 3050
+Text Notes 7200 2650 0    50   ~ 0
+Aim for 4.3V output, which implies a minimum input voltage of 5.5V
+Wire Wire Line
+	4850 2300 5550 2300
+Wire Wire Line
+	4850 2300 4850 3050
+$EndSCHEMATC
