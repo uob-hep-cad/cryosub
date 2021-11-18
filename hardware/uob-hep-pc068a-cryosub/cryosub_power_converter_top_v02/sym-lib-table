@@ -1,3 +1,4 @@
 (sym_lib_table
   (lib (name R-78AA3.3-0.5SMD-R)(type Legacy)(uri ${KIPRJMOD}/R-78AA3.3-0.5SMD-R/R-78AA3.3-0.5SMD-R.lib)(options "")(descr ""))
+  (lib (name MAX15059BATET)(type Legacy)(uri ${KIPRJMOD}/MAX15059BATET.lib)(options "")(descr ""))
 )

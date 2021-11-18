@@ -1,3 +1,4 @@
 (fp_lib_table
   (lib (name R-78AA3.3-0.5SMD-R)(type KiCad)(uri ${KIPRJMOD}/R-78AA3.3-0.5SMD-R.pretty)(options "")(descr ""))
+  (lib (name MAX15059BATET)(type KiCad)(uri ${KIPRJMOD}/MAX15059BATET.pretty)(options "")(descr ""))
 )
