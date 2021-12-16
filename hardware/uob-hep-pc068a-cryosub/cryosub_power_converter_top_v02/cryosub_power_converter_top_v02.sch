@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 3
+Sheet 1 4
 Title ""
 Date ""
 Rev ""
@@ -390,4 +390,18 @@ Wire Wire Line
 	6800 3200 7050 3200
 Wire Wire Line
 	1450 2750 2250 2750
+$Sheet
+S 5250 900  900  600 
+U 6196D499
+F0 "sipm_dcdc" 50
+F1 "sipm_dcdc.sch" 50
+$EndSheet
+Text HLabel 5250 1050 0    50   Input ~ 0
+vin
+Text HLabel 6150 1050 0    50   Output ~ 0
+vout
+Text HLabel 5250 1250 0    50   Input ~ 0
+enable
+Text HLabel 5250 1450 0    50   BiDi ~ 0
+gnd
 $EndSCHEMATC

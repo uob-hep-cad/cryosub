@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 3
+Sheet 1 4
 Title ""
 Date ""
 Rev ""
@@ -71,7 +71,7 @@ U 1 1 613A0646
 P 750 2750
 F 0 "J1" H 858 2931 50  0000 C CNN
 F 1 "Conn_01x02_Male" H 858 2840 50  0000 C CNN
-F 2 "Connector_Phoenix_MC:PhoenixContact_MCV_1,5_2-G-3.81_1x02_P3.81mm_Vertical" H 750 2750 50  0001 C CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical" H 750 2750 50  0001 C CNN
 F 3 "~" H 750 2750 50  0001 C CNN
 	1    750  2750
 	1    0    0    -1  
@@ -390,4 +390,18 @@ Wire Wire Line
 	6800 3200 7050 3200
 Wire Wire Line
 	1450 2750 2250 2750
+$Sheet
+S 5250 900  900  600 
+U 6196D499
+F0 "sipm_dcdc" 50
+F1 "sipm_dcdc.sch" 50
+$EndSheet
+Text HLabel 5250 1050 0    50   Input ~ 0
+vin
+Text HLabel 6150 1050 0    50   Output ~ 0
+vout
+Text HLabel 5250 1250 0    50   Input ~ 0
+enable
+Text HLabel 5250 1450 0    50   BiDi ~ 0
+gnd
 $EndSCHEMATC
