@@ -1,0 +1,5 @@
+(sym_lib_table
+  (lib (name cryosub_power_converter_top_v03-rescue)(type Legacy)(uri ${KIPRJMOD}/cryosub_power_converter_top_v03-rescue.lib)(options "")(descr ""))
+  (lib (name MAX15059BATET)(type Legacy)(uri ${KIPRJMOD}/MAX15059BATET.lib)(options "")(descr ""))
+  (lib (name 2021-12-17_13-26-38)(type Legacy)(uri ${KIPRJMOD}/LTC3129EMSE-1-PBF/2021-12-17_13-26-38.lib)(options "")(descr ""))
+)

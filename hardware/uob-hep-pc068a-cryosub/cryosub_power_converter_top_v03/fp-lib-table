@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name footprints)(type KiCad)(uri ${KIPRJMOD}/LTC3129EMSE-1-PBF/footprints.pretty)(options "")(descr ""))
+)

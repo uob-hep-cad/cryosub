@@ -1,0 +1,142 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 4 4
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text HLabel 2100 2050 0    50   Input ~ 0
+vin
+Text HLabel 9000 4150 2    50   Output ~ 0
+vout
+Text HLabel 1850 3850 0    50   Input ~ 0
+enable
+Text HLabel 5450 6550 0    50   BiDi ~ 0
+gnd
+$Comp
+L MAX15059BATET:MAX15059BATE+ U2
+U 1 1 6196F56C
+P 4250 3650
+F 0 "U2" H 5550 4037 60  0000 C CNN
+F 1 "MAX15059BATE+" H 5550 3931 60  0000 C CNN
+F 2 "MAX15059BATET:MAX15059BATE&plus_" H 5550 3890 60  0001 C CNN
+F 3 "" H 4250 3650 60  0000 C CNN
+	1    4250 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4250 3650 3650 3650
+Wire Wire Line
+	5450 6150 5450 6550
+Wire Wire Line
+	2100 2050 2450 2050
+Wire Wire Line
+	3400 2050 3400 3750
+Wire Wire Line
+	3400 3750 4250 3750
+$Comp
+L Device:L L3
+U 1 1 61975858
+P 7150 3250
+F 0 "L3" H 7107 3204 50  0000 R CNN
+F 1 "4.7uF,1008PS-472KLC " H 7107 3295 50  0000 R CNN
+F 2 "Inductor_SMD:L_1008_2520Metric" H 7150 3250 50  0001 C CNN
+F 3 "https://www.mouser.co.uk/datasheet/2/597/1008ps-270724.pdf" H 7150 3250 50  0001 C CNN
+	1    7150 3250
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6850 3650 7000 3650
+Wire Wire Line
+	7000 3650 7000 3750
+Wire Wire Line
+	7000 6150 5450 6150
+Connection ~ 5450 6150
+Wire Wire Line
+	6850 3750 7000 3750
+Connection ~ 7000 3750
+Wire Wire Line
+	7000 3750 7000 6150
+Wire Wire Line
+	3400 2050 7150 2050
+Wire Wire Line
+	7150 2050 7150 3100
+Wire Wire Line
+	5200 6150 5450 6150
+Wire Wire Line
+	3650 6150 5450 6150
+Connection ~ 3400 2050
+Wire Wire Line
+	7150 3400 7150 3850
+Wire Wire Line
+	7150 3850 6850 3850
+Wire Wire Line
+	7150 3950 7150 3850
+Connection ~ 7150 3850
+Wire Wire Line
+	7150 3950 6850 3950
+Wire Wire Line
+	6850 4150 9000 4150
+Wire Wire Line
+	3650 3650 3650 3950
+Wire Wire Line
+	4250 3850 1850 3850
+Wire Wire Line
+	4250 3950 3650 3950
+Connection ~ 3650 3950
+Wire Wire Line
+	3650 3950 3650 4350
+Wire Wire Line
+	3400 4150 3400 3750
+Connection ~ 3400 3750
+Wire Wire Line
+	4250 4150 3400 4150
+Wire Wire Line
+	4250 4350 3650 4350
+Connection ~ 3650 4350
+Wire Wire Line
+	3650 4350 3650 6150
+$Comp
+L Device:L L?
+U 1 1 6199D831
+P 2600 2050
+F 0 "L?" V 2419 2050 50  0000 C CNN
+F 1 "1.0uH" V 2510 2050 50  0000 C CNN
+F 2 "" H 2600 2050 50  0001 C CNN
+F 3 "~" H 2600 2050 50  0001 C CNN
+	1    2600 2050
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2750 2050 3400 2050
+$Comp
+L Device:C C?
+U 1 1 6199F834
+P 2300 2500
+F 0 "C?" H 2415 2546 50  0000 L CNN
+F 1 "C" H 2415 2455 50  0000 L CNN
+F 2 "" H 2338 2350 50  0001 C CNN
+F 3 "~" H 2300 2500 50  0001 C CNN
+	1    2300 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 6199FDAA
+P 3000 2500
+F 0 "C?" H 3115 2546 50  0000 L CNN
+F 1 "C" H 3115 2455 50  0000 L CNN
+F 2 "" H 3038 2350 50  0001 C CNN
+F 3 "~" H 3000 2500 50  0001 C CNN
+	1    3000 2500
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
