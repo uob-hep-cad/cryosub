@@ -186,8 +186,6 @@ Connection ~ 7150 2050
 Wire Wire Line
 	8250 2050 8250 2400
 Wire Wire Line
-	7800 2050 8050 2050
-Wire Wire Line
 	8250 2700 8250 3650
 Wire Wire Line
 	8250 3650 7000 3650
@@ -199,7 +197,7 @@ L Device:R R15
 U 1 1 61D4A63C
 P 8850 2400
 F 0 "R15" H 8920 2446 50  0000 L CNN
-F 1 "R" H 8920 2355 50  0000 L CNN
+F 1 "380k" H 8920 2355 50  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" V 8780 2400 50  0001 C CNN
 F 3 "~" H 8850 2400 50  0001 C CNN
 	1    8850 2400
@@ -210,7 +208,7 @@ L Device:R R16
 U 1 1 61D4AE6E
 P 8850 3200
 F 0 "R16" H 8920 3246 50  0000 L CNN
-F 1 "R" H 8920 3155 50  0000 L CNN
+F 1 "10k" H 8920 3155 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 8780 3200 50  0001 C CNN
 F 3 "~" H 8850 3200 50  0001 C CNN
 	1    8850 3200
@@ -237,14 +235,12 @@ Wire Wire Line
 	8850 2850 8850 3050
 Text Label 2650 3050 0    50   ~ 0
 gnd
-Wire Wire Line
-	6850 4250 7650 4250
 $Comp
 L Device:R R13
 U 1 1 61D546C0
 P 7500 5300
 F 0 "R13" H 7570 5346 50  0000 L CNN
-F 1 "R" H 7570 5255 50  0000 L CNN
+F 1 "120k" H 7570 5255 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 7430 5300 50  0001 C CNN
 F 3 "~" H 7500 5300 50  0001 C CNN
 	1    7500 5300
@@ -255,7 +251,7 @@ L Device:R R14
 U 1 1 61D5505E
 P 8100 5300
 F 0 "R14" H 8170 5346 50  0000 L CNN
-F 1 "R" H 8170 5255 50  0000 L CNN
+F 1 "10k" H 8170 5255 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 8030 5300 50  0001 C CNN
 F 3 "~" H 8100 5300 50  0001 C CNN
 	1    8100 5300
@@ -280,30 +276,20 @@ Wire Wire Line
 Wire Wire Line
 	8100 4350 6850 4350
 Wire Wire Line
-	8050 2050 8050 4050
-Wire Wire Line
-	8050 4050 6850 4050
-Connection ~ 8050 2050
-Wire Wire Line
-	8050 2050 8250 2050
-Wire Wire Line
 	4250 4250 1850 4250
 Text HLabel 1850 4250 0    50   Output ~ 0
 ilim*
-Wire Wire Line
-	8850 2700 9300 2700
 Connection ~ 8850 2700
 Wire Wire Line
 	8850 2700 8850 2850
 Text HLabel 9300 2700 2    50   Input ~ 0
 vcont
-NoConn ~ 7650 4250
 $Comp
 L Device:R R17
 U 1 1 61D61133
 P 9450 2050
 F 0 "R17" V 9243 2050 50  0000 C CNN
-F 1 "R" V 9334 2050 50  0000 C CNN
+F 1 "100" V 9334 2050 50  0000 C CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" V 9380 2050 50  0001 C CNN
 F 3 "~" H 9450 2050 50  0001 C CNN
 	1    9450 2050
@@ -328,23 +314,72 @@ Connection ~ 8850 2050
 Wire Wire Line
 	10050 2850 10050 3650
 Wire Wire Line
-	10050 3650 8850 3650
+	10050 3650 9250 3650
 Connection ~ 8850 3650
-Wire Wire Line
-	8050 4050 10500 4050
 Wire Wire Line
 	10500 4050 10500 2050
 Wire Wire Line
 	10500 2050 10050 2050
-Connection ~ 8050 4050
 Connection ~ 10050 2050
 Wire Wire Line
 	8850 2050 9300 2050
 Wire Wire Line
 	9600 2050 10050 2050
 Wire Wire Line
-	8100 4350 9000 4350
+	8100 4350 8800 4350
 Connection ~ 8100 4350
 Text HLabel 9000 4350 2    50   Output ~ 0
 imon
+NoConn ~ 6850 4250
+Wire Wire Line
+	7800 2050 8250 2050
+Wire Wire Line
+	6850 4050 10500 4050
+Text Notes 8400 1650 0    50   ~ 0
+R15 = R16*( (Vout/1.23) -1)
+Text Notes 8400 1500 0    50   ~ 0
+Set for 48V
+Text Notes 8350 5300 0    50   ~ 0
+Voltage at Imon = 10k * Isipm
+Text Notes 7500 6450 0    50   ~ 0
+Set for 100uA max current\nR13(kOhms) = ( (1.23/ Ilim(mA))*10 - 2.67(kOhms))
+$Comp
+L Connector:TestPoint TP1
+U 1 1 61D9D599
+P 8800 4500
+F 0 "TP1" H 8742 4526 50  0000 R CNN
+F 1 "TestPoint" H 8742 4617 50  0000 R CNN
+F 2 "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 9000 4500 50  0001 C CNN
+F 3 "~" H 9000 4500 50  0001 C CNN
+	1    8800 4500
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	8800 4500 8800 4350
+Connection ~ 8800 4350
+Wire Wire Line
+	8800 4350 9000 4350
+Wire Wire Line
+	8850 2700 9250 2700
+$Comp
+L Connector:TestPoint_2Pole TP2
+U 1 1 61DA44D4
+P 9250 3050
+F 0 "TP2" V 9204 3108 50  0000 L CNN
+F 1 "TestPoint_2Pole" V 9295 3108 50  0000 L CNN
+F 2 "TestPoint:TestPoint_2Pads_Pitch2.54mm_Drill0.8mm" H 9250 3050 50  0001 C CNN
+F 3 "~" H 9250 3050 50  0001 C CNN
+	1    9250 3050
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9250 2850 9250 2700
+Connection ~ 9250 2700
+Wire Wire Line
+	9250 2700 9300 2700
+Wire Wire Line
+	9250 3250 9250 3650
+Connection ~ 9250 3650
+Wire Wire Line
+	9250 3650 8850 3650
 $EndSCHEMATC
