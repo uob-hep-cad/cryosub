@@ -460,7 +460,7 @@ U 1 1 61DC85AC
 P 1150 950
 F 0 "H1" V 1387 953 50  0000 C CNN
 F 1 "MountingHole_Pad" V 1296 953 50  0000 C CNN
-F 2 "MountingHole:MountingHole_2.7mm_M2.5_DIN965" H 1150 950 50  0001 C CNN
+F 2 "MountingHole:MountingHole_2.7mm_M2.5_DIN965_Pad" H 1150 950 50  0001 C CNN
 F 3 "~" H 1150 950 50  0001 C CNN
 	1    1150 950 
 	0    -1   -1   0   
@@ -471,7 +471,7 @@ U 1 1 61DCA5C5
 P 1150 1350
 F 0 "H2" V 1387 1353 50  0000 C CNN
 F 1 "MountingHole_Pad" V 1296 1353 50  0000 C CNN
-F 2 "MountingHole:MountingHole_2.7mm_M2.5_DIN965" H 1150 1350 50  0001 C CNN
+F 2 "MountingHole:MountingHole_2.7mm_M2.5_DIN965_Pad" H 1150 1350 50  0001 C CNN
 F 3 "~" H 1150 1350 50  0001 C CNN
 	1    1150 1350
 	0    -1   -1   0   
@@ -482,7 +482,7 @@ U 1 1 61DCFD72
 P 1150 1750
 F 0 "H3" V 1387 1753 50  0000 C CNN
 F 1 "MountingHole_Pad" V 1296 1753 50  0000 C CNN
-F 2 "MountingHole:MountingHole_2.7mm_M2.5_DIN965" H 1150 1750 50  0001 C CNN
+F 2 "MountingHole:MountingHole_2.7mm_M2.5_DIN965_Pad" H 1150 1750 50  0001 C CNN
 F 3 "~" H 1150 1750 50  0001 C CNN
 	1    1150 1750
 	0    -1   -1   0   
