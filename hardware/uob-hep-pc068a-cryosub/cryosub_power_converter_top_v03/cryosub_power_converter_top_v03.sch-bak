@@ -110,39 +110,6 @@ F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/3042fb.
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H1
-U 1 1 613AA181
-P 1000 950
-F 0 "H1" H 1100 996 50  0000 L CNN
-F 1 "MountingHole" H 1100 905 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.7mm_M2.5_DIN965" H 1000 950 50  0001 C CNN
-F 3 "~" H 1000 950 50  0001 C CNN
-	1    1000 950 
-	1    0    0    -1  
-$EndComp
-$Comp
-L Mechanical:MountingHole H2
-U 1 1 613AB185
-P 1000 1350
-F 0 "H2" H 1100 1396 50  0000 L CNN
-F 1 "MountingHole" H 1100 1305 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.7mm_M2.5_DIN965" H 1000 1350 50  0001 C CNN
-F 3 "~" H 1000 1350 50  0001 C CNN
-	1    1000 1350
-	1    0    0    -1  
-$EndComp
-$Comp
-L Mechanical:MountingHole H3
-U 1 1 613AB5A0
-P 1000 1750
-F 0 "H3" H 1100 1796 50  0000 L CNN
-F 1 "MountingHole" H 1100 1705 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.7mm_M2.5_DIN965" H 1000 1750 50  0001 C CNN
-F 3 "~" H 1000 1750 50  0001 C CNN
-	1    1000 1750
-	1    0    0    -1  
-$EndComp
-$Comp
 L Connector:Conn_01x02_Male J3
 U 1 1 613B8041
 P 4650 6250
@@ -396,10 +363,10 @@ F1 "sipm_dcdc.sch" 50
 F2 "vin" I L 8500 1250 50 
 F3 "vout" O R 9400 1250 50 
 F4 "enable" I L 8500 1400 50 
-F5 "gnd" B L 8500 1700 50 
-F6 "ilim*" O R 9400 1450 50 
-F7 "vcont" I L 8500 1550 50 
-F8 "imon" O R 9400 1650 50 
+F5 "ilim*" O R 9400 1450 50 
+F6 "vcont" I L 8500 1550 50 
+F7 "imon" O R 9400 1650 50 
+F8 "gnd" B L 8500 1700 50 
 $EndSheet
 Wire Wire Line
 	6200 2950 7050 2950
@@ -408,7 +375,7 @@ Wire Wire Line
 Wire Wire Line
 	8400 1700 8400 2000
 Wire Wire Line
-	8500 1250 8250 1250
+	8500 1250 8400 1250
 Wire Wire Line
 	8250 1250 8250 2950
 Connection ~ 8250 2950
@@ -433,7 +400,6 @@ Wire Wire Line
 	9400 1450 9550 1450
 Wire Wire Line
 	9400 1650 9550 1650
-NoConn ~ 8400 1400
 NoConn ~ 8400 1550
 NoConn ~ 9550 1450
 NoConn ~ 9550 1650
@@ -483,4 +449,67 @@ Wire Wire Line
 Connection ~ 8650 2950
 Wire Wire Line
 	8650 2950 9150 2950
+Wire Wire Line
+	8400 1400 8400 1250
+Connection ~ 8400 1250
+Wire Wire Line
+	8400 1250 8250 1250
+$Comp
+L Mechanical:MountingHole_Pad H1
+U 1 1 61DC85AC
+P 1150 950
+F 0 "H1" V 1387 953 50  0000 C CNN
+F 1 "MountingHole_Pad" V 1296 953 50  0000 C CNN
+F 2 "MountingHole:MountingHole_2.7mm_M2.5_DIN965" H 1150 950 50  0001 C CNN
+F 3 "~" H 1150 950 50  0001 C CNN
+	1    1150 950 
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad H2
+U 1 1 61DCA5C5
+P 1150 1350
+F 0 "H2" V 1387 1353 50  0000 C CNN
+F 1 "MountingHole_Pad" V 1296 1353 50  0000 C CNN
+F 2 "MountingHole:MountingHole_2.7mm_M2.5_DIN965" H 1150 1350 50  0001 C CNN
+F 3 "~" H 1150 1350 50  0001 C CNN
+	1    1150 1350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad H3
+U 1 1 61DCFD72
+P 1150 1750
+F 0 "H3" V 1387 1753 50  0000 C CNN
+F 1 "MountingHole_Pad" V 1296 1753 50  0000 C CNN
+F 2 "MountingHole:MountingHole_2.7mm_M2.5_DIN965" H 1150 1750 50  0001 C CNN
+F 3 "~" H 1150 1750 50  0001 C CNN
+	1    1150 1750
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1250 950  1600 950 
+Wire Wire Line
+	1600 950  1600 1350
+Wire Wire Line
+	1250 1350 1600 1350
+Connection ~ 1600 1350
+Wire Wire Line
+	1600 1350 1600 1750
+Wire Wire Line
+	1250 1750 1600 1750
+Connection ~ 1600 1750
+$Comp
+L power:GND #PWR010
+U 1 1 61DD9A7D
+P 1600 1950
+F 0 "#PWR010" H 1600 1700 50  0001 C CNN
+F 1 "GND" H 1605 1777 50  0000 C CNN
+F 2 "" H 1600 1950 50  0001 C CNN
+F 3 "" H 1600 1950 50  0001 C CNN
+	1    1600 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1600 1750 1600 1950
 $EndSCHEMATC

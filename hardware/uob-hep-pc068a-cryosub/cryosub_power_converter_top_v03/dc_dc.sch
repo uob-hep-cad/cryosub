@@ -20,23 +20,23 @@ vout
 $Comp
 L Device:L_Core_Ferrite L1
 U 1 1 618D805B
-P 1850 2900
-F 0 "L1" V 1669 2900 50  0000 C CNN
-F 1 "1.0uH" V 1760 2900 50  0000 C CNN
-F 2 "Inductor_SMD:L_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 1850 2900 50  0001 C CNN
-F 3 "~" H 1850 2900 50  0001 C CNN
-	1    1850 2900
+P 1350 2900
+F 0 "L1" V 1169 2900 50  0000 C CNN
+F 1 "1.0uH" V 1260 2900 50  0000 C CNN
+F 2 "Inductor_SMD:L_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 1350 2900 50  0001 C CNN
+F 3 "~" H 1350 2900 50  0001 C CNN
+	1    1350 2900
 	0    1    1    0   
 $EndComp
 $Comp
 L Device:C C7
 U 1 1 618D86D8
-P 2200 3250
-F 0 "C7" H 2315 3296 50  0000 L CNN
-F 1 "22uF" H 2315 3205 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 2238 3100 50  0001 C CNN
-F 3 "~" H 2200 3250 50  0001 C CNN
-	1    2200 3250
+P 2200 3800
+F 0 "C7" H 2315 3846 50  0000 L CNN
+F 1 "22uF" H 2315 3755 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 2238 3650 50  0001 C CNN
+F 3 "~" H 2200 3800 50  0001 C CNN
+	1    2200 3800
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -73,11 +73,11 @@ F 3 "~" H 2650 3750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	850  2900 1700 2900
+	850  2900 1200 2900
 Wire Wire Line
-	2000 2900 2200 2900
+	1500 2900 1650 2900
 Wire Wire Line
-	2200 3100 2200 2900
+	2200 3650 2200 2900
 Connection ~ 2200 2900
 Wire Wire Line
 	2650 3600 2650 3500
@@ -235,7 +235,7 @@ Wire Wire Line
 Wire Wire Line
 	2200 5000 2650 5000
 Wire Wire Line
-	2200 3400 2200 5000
+	2200 3950 2200 5000
 Wire Wire Line
 	3100 5350 3100 5000
 Text HLabel 3100 5350 0    50   BiDi ~ 0
@@ -287,7 +287,7 @@ L Device:R R18
 U 1 1 61E0D93A
 P 7000 3100
 F 0 "R18" H 7070 3146 50  0000 L CNN
-F 1 "R" H 7070 3055 50  0000 L CNN
+F 1 "330k" H 7070 3055 50  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 6930 3100 50  0001 C CNN
 F 3 "~" H 7000 3100 50  0001 C CNN
 	1    7000 3100
@@ -298,7 +298,7 @@ L Device:R R19
 U 1 1 61E0D940
 P 7000 3650
 F 0 "R19" H 7070 3696 50  0000 L CNN
-F 1 "R" H 7070 3605 50  0000 L CNN
+F 1 "100k" H 7070 3605 50  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 6930 3650 50  0001 C CNN
 F 3 "~" H 7000 3650 50  0001 C CNN
 	1    7000 3650
@@ -356,4 +356,25 @@ Text Notes 1200 2550 0    50   ~ 0
 LC filter at input for noise suppression
 Text Notes 1650 5950 0    50   ~ 0
 Assume use of AFBR-POC206L as a power converter.\nSo, set MPPC to keep input voltage above 5.5V\n\nR11 =R5, R12 = R6\n\nVin(MPPC) = 1.175 * ( 1 + R5/R6 )\n--> R11/R12 = 5/1.175 - 1 = 3.3\n
+$Comp
+L Device:C C17
+U 1 1 61D7D068
+P 1650 3800
+F 0 "C17" H 1765 3846 50  0000 L CNN
+F 1 "2.2uF" H 1765 3755 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 1688 3650 50  0001 C CNN
+F 3 "~" H 1650 3800 50  0001 C CNN
+	1    1650 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1650 3950 1650 5000
+Wire Wire Line
+	1650 3650 1650 2900
+Connection ~ 1650 2900
+Wire Wire Line
+	1650 2900 2200 2900
+Wire Wire Line
+	1650 5000 2200 5000
+Connection ~ 2200 5000
 $EndSCHEMATC

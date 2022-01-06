@@ -1,4 +1,5 @@
 (fp_lib_table
   (lib (name footprints)(type KiCad)(uri ${KIPRJMOD}/LTC3129EMSE-1-PBF/footprints.pretty)(options "")(descr ""))
   (lib (name Wurth-744025004)(type KiCad)(uri ${KIPRJMOD}/Wurth-744025004.pretty)(options "")(descr ""))
+  (lib (name MAX15059BATET)(type KiCad)(uri ${KIPRJMOD}/MAX15059BATET.pretty)(options "")(descr ""))
 )
