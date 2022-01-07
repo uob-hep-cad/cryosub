@@ -59,30 +59,7 @@ F 3 "" H 1450 3350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1450 3350 1450 3250
-Wire Wire Line
 	1450 2750 1450 2900
-Wire Wire Line
-	1450 2750 950  2750
-Connection ~ 1450 2750
-$Comp
-L Connector:Conn_01x02_Male J1
-U 1 1 613A0646
-P 750 2750
-F 0 "J1" H 858 2931 50  0000 C CNN
-F 1 "Conn_01x02_Male" H 858 2840 50  0000 C CNN
-F 2 "Connector_Molex:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical" H 750 2750 50  0001 C CNN
-F 3 "~" H 750 2750 50  0001 C CNN
-	1    750  2750
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	950  2850 950  3250
-Wire Wire Line
-	950  3250 1450 3250
-Connection ~ 1450 3250
-Wire Wire Line
-	1450 3250 1450 3200
 Text Label 6800 2950 2    50   ~ 0
 vload
 Text Label 2900 3550 2    50   ~ 0
@@ -109,32 +86,6 @@ F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/3042fb.
 	1    2950 6350
 	1    0    0    -1  
 $EndComp
-$Comp
-L Connector:Conn_01x02_Male J3
-U 1 1 613B8041
-P 4650 6250
-F 0 "J3" H 4622 6224 50  0000 R CNN
-F 1 "Conn_01x02_Male" H 4622 6133 50  0000 R CNN
-F 2 "Connector_Molex:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical" H 4650 6250 50  0001 C CNN
-F 3 "~" H 4650 6250 50  0001 C CNN
-	1    4650 6250
-	-1   0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR03
-U 1 1 613B8B62
-P 4250 6500
-F 0 "#PWR03" H 4250 6250 50  0001 C CNN
-F 1 "GND" H 4255 6327 50  0000 C CNN
-F 2 "" H 4250 6500 50  0001 C CNN
-F 3 "" H 4250 6500 50  0001 C CNN
-	1    4250 6500
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4250 6500 4250 6350
-Wire Wire Line
-	4250 6350 4450 6350
 Text Label 4300 6250 2    50   ~ 0
 p5v_out
 Text Notes 10500 4600 2    50   ~ 0
@@ -356,26 +307,22 @@ Wire Wire Line
 Wire Wire Line
 	1450 2750 2250 2750
 $Sheet
-S 8500 1150 900  600 
+S 8800 1150 900  600 
 U 6196D499
 F0 "sipm_dcdc" 50
 F1 "sipm_dcdc.sch" 50
-F2 "vin" I L 8500 1250 50 
-F3 "vout" O R 9400 1250 50 
-F4 "enable" I L 8500 1400 50 
-F5 "ilim*" O R 9400 1450 50 
-F6 "vcont" I L 8500 1550 50 
-F7 "imon" O R 9400 1650 50 
-F8 "gnd" B L 8500 1700 50 
+F2 "vin" I L 8800 1250 50 
+F3 "vout" O R 9700 1250 50 
+F4 "enable" I L 8800 1400 50 
+F5 "ilim*" O R 9700 1450 50 
+F6 "vcont" I L 8800 1550 50 
+F7 "imon" O R 9700 1650 50 
+F8 "gnd" B L 8800 1700 50 
 $EndSheet
 Wire Wire Line
 	6200 2950 7050 2950
 Wire Wire Line
-	8500 1700 8400 1700
-Wire Wire Line
-	8400 1700 8400 2000
-Wire Wire Line
-	8500 1250 8400 1250
+	8650 1700 8650 2000
 Wire Wire Line
 	8250 1250 8250 2950
 Connection ~ 8250 2950
@@ -384,55 +331,24 @@ Wire Wire Line
 $Comp
 L power:GND #PWR08
 U 1 1 61D61C95
-P 8400 2000
-F 0 "#PWR08" H 8400 1750 50  0001 C CNN
-F 1 "GND" H 8405 1827 50  0000 C CNN
-F 2 "" H 8400 2000 50  0001 C CNN
-F 3 "" H 8400 2000 50  0001 C CNN
-	1    8400 2000
+P 8650 2000
+F 0 "#PWR08" H 8650 1750 50  0001 C CNN
+F 1 "GND" H 8655 1827 50  0000 C CNN
+F 2 "" H 8650 2000 50  0001 C CNN
+F 3 "" H 8650 2000 50  0001 C CNN
+	1    8650 2000
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8500 1400 8400 1400
+	9700 1450 9850 1450
 Wire Wire Line
-	8500 1550 8400 1550
+	9700 1650 9850 1650
+NoConn ~ 9850 1450
+NoConn ~ 9850 1650
 Wire Wire Line
-	9400 1450 9550 1450
-Wire Wire Line
-	9400 1650 9550 1650
-NoConn ~ 8400 1550
-NoConn ~ 9550 1450
-NoConn ~ 9550 1650
-Wire Wire Line
-	9400 1250 10300 1250
-Text Label 10250 1250 2    50   ~ 0
+	9700 1250 10600 1250
+Text Label 10550 1250 2    50   ~ 0
 sipm_bias
-$Comp
-L Connector:Conn_01x02_Male J4
-U 1 1 61E36466
-P 10500 1250
-F 0 "J4" H 10472 1224 50  0000 R CNN
-F 1 "Conn_01x02_Male" H 10472 1133 50  0000 R CNN
-F 2 "Connector_Molex:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical" H 10500 1250 50  0001 C CNN
-F 3 "~" H 10500 1250 50  0001 C CNN
-	1    10500 1250
-	-1   0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR09
-U 1 1 61E3E7ED
-P 10200 1500
-F 0 "#PWR09" H 10200 1250 50  0001 C CNN
-F 1 "GND" H 10205 1327 50  0000 C CNN
-F 2 "" H 10200 1500 50  0001 C CNN
-F 3 "" H 10200 1500 50  0001 C CNN
-	1    10200 1500
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	10200 1500 10200 1350
-Wire Wire Line
-	10200 1350 10300 1350
 $Comp
 L power:+5V #PWR0102
 U 1 1 61D87DB9
@@ -512,4 +428,73 @@ F 3 "" H 1600 1950 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	1600 1750 1600 1950
+$Comp
+L Connector_Generic:Conn_02x04_Odd_Even J1
+U 1 1 61D98992
+P 5100 1300
+F 0 "J1" H 5150 1617 50  0000 C CNN
+F 1 "Conn_02x04_Odd_Even" H 5150 1526 50  0000 C CNN
+F 2 "Connector_IDC:IDC-Header_2x04_P2.54mm_Vertical" H 5100 1300 50  0001 C CNN
+F 3 "~" H 5100 1300 50  0001 C CNN
+	1    5100 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR03
+U 1 1 61D9FA8F
+P 5550 1800
+F 0 "#PWR03" H 5550 1550 50  0001 C CNN
+F 1 "GND" H 5555 1627 50  0000 C CNN
+F 2 "" H 5550 1800 50  0001 C CNN
+F 3 "" H 5550 1800 50  0001 C CNN
+	1    5550 1800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5400 1200 5550 1200
+Wire Wire Line
+	5550 1200 5550 1300
+Wire Wire Line
+	5400 1300 5550 1300
+Connection ~ 5550 1300
+Wire Wire Line
+	5550 1300 5550 1400
+Wire Wire Line
+	5400 1400 5550 1400
+Connection ~ 5550 1400
+Wire Wire Line
+	5550 1400 5550 1500
+Wire Wire Line
+	5400 1500 5550 1500
+Connection ~ 5550 1500
+Wire Wire Line
+	5550 1500 5550 1800
+Wire Wire Line
+	4900 1200 4200 1200
+Wire Wire Line
+	4900 1500 4200 1500
+Wire Wire Line
+	4900 1400 4200 1400
+Wire Wire Line
+	4900 1300 4200 1300
+Text Label 4200 1300 0    50   ~ 0
+sipm_bias
+Text Label 4200 1400 0    50   ~ 0
+p5v_out
+Text Label 4200 1500 0    50   ~ 0
+VDC
+Text Label 4200 1200 0    50   ~ 0
+vcont
+Wire Wire Line
+	8400 1250 8800 1250
+Wire Wire Line
+	8400 1400 8800 1400
+Wire Wire Line
+	8400 1550 8800 1550
+Wire Wire Line
+	8650 1700 8800 1700
+Text Label 8400 1550 0    50   ~ 0
+vcont
+Wire Wire Line
+	1450 3200 1450 3350
 $EndSCHEMATC
