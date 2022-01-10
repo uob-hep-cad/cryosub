@@ -19,13 +19,13 @@ L1 L4 L5,1,TDK,MLF1608A1R0JTD25,1.0uH,Inductor SMD L 0603 1608Metric Pad1.05x0.9
 L2 L3,1,Wurth,744025004,"4.7uH,WE-TPC,744025004",Wurth-744025004 Wuerth Elektronik-744025004-Manufacturer Recommended,Wurth-744025004 Wuerth Elektronik-744025004-Manufacturer Recommended,https://www.farnell.com/datasheets/1920114.pdf,,,,,
 Q1 Q2,2,Infineon,IRLML2402TR,IRLML2402TR,Package TO SOT SMD SOT-23,IRLML2402TR Package TO SOT SMD SOT-23,http://www.diodes.com/assets/Datasheets/BSS127.pdf,./IFX-Power_OptiMOS_N-channel_small_signal_MOSFET_240V_250V_400V_600V_Spice-web.lib,BSS127_L0,Y,3 1 2,X
 Q3,1,Onsemi,FDD306P,FDD306P,Package TO SOT SMD TO-252-3 TabPin2,FDD306P Package TO SOT SMD TO-252-3 TabPin2,~,./FDD306P.lib,FDD306P,Y,2 1 3,X
-R10,1,YAGEO, RC0603FR-0749K9L,49.9k,Resistor SMD R 0603 1608Metric Pad0.98x0.95mm HandSolder,49.9k Resistor SMD R 0603 1608Metric Pad0.98x0.95mm HandSolder,~,,,,,
+R10,1,YAGEO,RC0603FR-0749K9L,49.9k,Resistor SMD R 0603 1608Metric Pad0.98x0.95mm HandSolder,49.9k Resistor SMD R 0603 1608Metric Pad0.98x0.95mm HandSolder,~,,,,,
 R11 R18,2,NEL,0603-330K,330k,Resistor SMD R 0603 1608Metric Pad0.98x0.95mm HandSolder,330k Resistor SMD R 0603 1608Metric Pad0.98x0.95mm HandSolder,~,,,,,
 R13,1,NEL,0603-120K,120k,Resistor SMD R 0402 1005Metric,120k Resistor SMD R 0402 1005Metric,~,,,,,
 R15,1,NEL,0603-360K,360k,Resistor SMD R 0603 1608Metric,380k Resistor SMD R 0603 1608Metric,~,,,,,
-R14 R16,2,NEL,0603-10K,10k,Resistor SMD R 0402 1005Metric,10k Resistor SMD R 0402 1005Metric,~,,,,,
+R14 R16 R20 R21,4,NEL,0603-10K,10k,Resistor SMD R 0402 1005Metric,10k Resistor SMD R 0402 1005Metric,~,,,,,
 R17,1,NEL,0603-100R,100,Resistor SMD R 0603 1608Metric,100 Resistor SMD R 0603 1608Metric,~,,,,,
-R20 R21 R4 R6,4,NEL,0603-200K,200k,Resistor SMD R 0603 1608Metric,200k Resistor SMD R 0603 1608Metric,~,,,,,
+R4 R6,2,NEL,0603-200K,200k,Resistor SMD R 0603 1608Metric,200k Resistor SMD R 0603 1608Metric,~,,,,,
 R5 R9,2,NEL,0603-1K,1K,Resistor SMD R 0603 1608Metric Pad0.98x0.95mm HandSolder,1K Resistor SMD R 0603 1608Metric Pad0.98x0.95mm HandSolder,~,,,,,
 R3 R7,2,NEL,0603-4K7,4.7k,Resistor SMD R 0603 1608Metric Pad0.98x0.95mm HandSolder,4.7k Resistor SMD R 0603 1608Metric Pad0.98x0.95mm HandSolder,~,,,,,
 R1 R2 R8 R12 R19,5,NEL,0603-100K,100k,Resistor SMD R 0603 1608Metric Pad0.98x0.95mm HandSolder,100k Resistor SMD R 0603 1608Metric Pad0.98x0.95mm HandSolder,~,,,,,

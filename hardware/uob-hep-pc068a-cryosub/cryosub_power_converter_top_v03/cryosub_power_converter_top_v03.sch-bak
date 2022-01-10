@@ -429,21 +429,21 @@ $EndComp
 Wire Wire Line
 	1600 1750 1600 1950
 $Comp
-L Connector_Generic:Conn_02x04_Odd_Even J?
+L Connector_Generic:Conn_02x04_Odd_Even J1
 U 1 1 61D98992
 P 5100 1300
-F 0 "J?" H 5150 1617 50  0000 C CNN
+F 0 "J1" H 5150 1617 50  0000 C CNN
 F 1 "Conn_02x04_Odd_Even" H 5150 1526 50  0000 C CNN
-F 2 "" H 5100 1300 50  0001 C CNN
+F 2 "Connector_IDC:IDC-Header_2x04_P2.54mm_Vertical" H 5100 1300 50  0001 C CNN
 F 3 "~" H 5100 1300 50  0001 C CNN
 	1    5100 1300
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR03
 U 1 1 61D9FA8F
 P 5550 1800
-F 0 "#PWR?" H 5550 1550 50  0001 C CNN
+F 0 "#PWR03" H 5550 1550 50  0001 C CNN
 F 1 "GND" H 5555 1627 50  0000 C CNN
 F 2 "" H 5550 1800 50  0001 C CNN
 F 3 "" H 5550 1800 50  0001 C CNN
@@ -497,4 +497,5 @@ Text Label 8400 1550 0    50   ~ 0
 vcont
 Wire Wire Line
 	1450 3200 1450 3350
+NoConn ~ 3500 3000
 $EndSCHEMATC

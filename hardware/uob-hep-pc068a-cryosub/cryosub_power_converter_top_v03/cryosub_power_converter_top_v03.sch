@@ -497,4 +497,5 @@ Text Label 8400 1550 0    50   ~ 0
 vcont
 Wire Wire Line
 	1450 3200 1450 3350
+NoConn ~ 3500 3000
 $EndSCHEMATC

@@ -168,8 +168,6 @@ Wire Wire Line
 	2650 3500 3000 3500
 Wire Wire Line
 	3000 3300 3900 3300
-Wire Wire Line
-	2650 2900 3300 2900
 Connection ~ 3750 2900
 NoConn ~ 5500 3000
 NoConn ~ 5500 3100
@@ -177,14 +175,7 @@ Wire Wire Line
 	10000 2800 7600 2800
 Connection ~ 7600 2800
 Wire Wire Line
-	3900 3400 3300 3400
-Wire Wire Line
-	3300 3400 3300 2900
-Wire Wire Line
 	5500 2800 6300 2800
-Connection ~ 3300 2900
-Wire Wire Line
-	3300 2900 3750 2900
 Wire Wire Line
 	3900 3700 3400 3700
 $Comp
@@ -257,7 +248,7 @@ Connection ~ 6300 2800
 Wire Wire Line
 	3200 3800 3900 3800
 Wire Wire Line
-	3200 950  3200 3800
+	3200 950  3200 3400
 Wire Wire Line
 	3200 950  4550 950 
 Connection ~ 3200 3800
@@ -377,4 +368,13 @@ Wire Wire Line
 Wire Wire Line
 	1650 5000 2200 5000
 Connection ~ 2200 5000
+Connection ~ 3200 3400
+Wire Wire Line
+	3200 3400 3200 3800
+Wire Wire Line
+	3200 3400 3900 3400
+Wire Wire Line
+	2650 2900 3750 2900
+Text Label 3400 3800 0    50   ~ 0
+vcc
 $EndSCHEMATC
