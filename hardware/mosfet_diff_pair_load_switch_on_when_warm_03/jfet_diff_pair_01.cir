@@ -1,0 +1,15 @@
+.title KiCad schematic
+.include "/Users/phdgc/KiCad-Spice-Library/Models/uncategorized/Bordodynovs Electronics Lib/cmp/standard.jft"
+R6 VDD Net-_C1-Pad1_ 20k
+R7 Net-_C1-Pad1_ 0 20k
+R4 Net-_Q1-Pad2_ 0 1.5k
+JQ2 Net-_Q2-Pad1_ Net-_Q1-Pad2_ Net-_C1-Pad1_ 2SK3557
+C1 Net-_C1-Pad1_ Net-_C1-Pad2_ 100u
+V2 Net-_C1-Pad2_ 0 dc 0 ac 100m
+JQ1 Net-_Q1-Pad1_ Net-_Q1-Pad2_ Net-_Q1-Pad3_ 2SK3557
+V1 VDD 0 dc 5
+R2 Net-_Q1-Pad3_ 0 20k
+R1 VDD Net-_Q1-Pad3_ 20k
+R5 VDD Net-_Q2-Pad1_ 3.3k
+R3 VDD Net-_Q1-Pad1_ 3.3k
+.end

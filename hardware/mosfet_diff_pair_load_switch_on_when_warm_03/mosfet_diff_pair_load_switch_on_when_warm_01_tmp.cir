@@ -1,0 +1,31 @@
+.title KiCad schematic
+.include "./FDD306P.lib"
+.include "./sim_ntc_10k_1.lib"
+.include "irlml2402.lib"
+R5 5V0 /vd2 4.7k
+XQ2 /vd2 /vg2 /vs irlml2402
+R9 /vg1 /vd2 200k
+R4 /vs 0 1K
+R2 /vg1 0 100k
+V1 5V0 0 dc 5
+R8 /VD1 /vg2 200k
+XQ1 /VD1 /vg1 /vs irlml2402
+R3 5V0 /VD1 4.7k
+R1 5V0 /vg1 100k
+R7 5V0 /vg2 100k
+R10 Net-_C1-Pad2_ /VD1 1k
+XTH1 /vg2 0 /vcont 0 NTC_10K_1
+V2 /vcont 0 dc 270 ac 1 pulse(1 350 0 10 10 10 100)
+XQ3 /vload Net-_C1-Pad2_ 5V0 FDD306P
+R6 /vload 0 5
+C2 /vload 0 1u
+C1 /vload Net-_C1-Pad2_ 30n
+.TEMP 27
+.CONTROL
+OPTIONS ABSTOL=1nA CHGTOL=1pC ITL1=150 ITL2=150 ITL4=500 RELTOL=0.011
+set filetype=ascii
+set wr_vecnames
+set wr_singlescale
+wrdata tmp.txt V("/vd1") V("/vd2") V("/vcont") V("/vload")
+.ENDC
+.end

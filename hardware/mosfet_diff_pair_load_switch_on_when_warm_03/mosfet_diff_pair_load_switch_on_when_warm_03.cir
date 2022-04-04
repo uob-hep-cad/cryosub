@@ -1,0 +1,31 @@
+.title KiCad schematic
+.include "./SiS407DN_PS.lib"
+.include "./sim_ntc_10k_1.lib"
+.include "irlml2402.lib"
+R1 5V0 /vg1 100k
+V1 5V0 0 dc 5
+R2 /vg1 0 100k
+XTH1 /vg2 0 /vcont 0 NTC_10K_1
+R7 5V0 /vg2 100k
+R10 Net-_C1-Pad2_ /VD1 1k
+V2 /vcont 0 dc 270 ac 1 pulse(1 350 0 10 10 10 100)
+R8 /VD1 /vg2 200k
+R3 5V0 /VD1 4.7k
+XQ1 /VD1 /vg1 /vs irlml2402
+R4 /vs 0 1K
+XQ2 /vd2 /vg2 /vs irlml2402
+R5 5V0 /vd2 4.7k
+R9 /vg1 /vd2 200k
+C2 /vload 0 1u
+C1 /vload Net-_C1-Pad2_ 30n
+XQ3 /vload Net-_C1-Pad2_ 5V0 SiS407DN
+R6 /vload 0 5
+.TEMP 27
+.CONTROL
+OPTIONS ABSTOL=1nA CHGTOL=1pC ITL1=150 ITL2=150 ITL4=500 RELTOL=0.011
+set filetype=ascii
+set wr_vecnames
+set wr_singlescale
+wrdata tmp.txt V("/vd1") V("/vd2") V("/vcont") V("/vload")
+.ENDC
+.end

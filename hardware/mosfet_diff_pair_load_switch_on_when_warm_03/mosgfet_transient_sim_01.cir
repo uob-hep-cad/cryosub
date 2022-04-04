@@ -1,0 +1,48 @@
+.title KiCad schematic
+.include "./IFX-Power_OptiMOS_N-channel_small_signal_MOSFET_240V_250V_400V_600V_Spice-web.lib"
+.include "./sim_ntc_10k_1.lib"
+R7 /vg2 0 15k
+V2 /vcont 0 dc 270 ac 1 pulse(1 300 0 10 10 10 100)
+XQ2 /vd2 /vg2 /vs BSS127_L0
+V1 5V0 0 dc 5
+XQ1 /VD1 /vg1 /vs BSS127_L0
+R5 5V0 /vd2 4.7k
+R9 /vg1 /vd2 30k
+R3 5V0 /VD1 4.7k
+R8 /VD1 /vg2 30k
+R1 5V0 /vg1 15k
+R4 /vs 0 1K
+R2 /vg1 0 15k
+XTH1 5V0 /vg2 /vcont 0 NTC_10K_1
+.save @r7[i]
+.save @v2[i]
+.save @v1[i]
+.save @r5[i]
+.save @r9[i]
+.save @r3[i]
+.save @r8[i]
+.save @r1[i]
+.save @r4[i]
+.save @r2[i]
+.save V(/VD1)
+.save V(/vcont)
+.save V(/vd2)
+.save V(/vg1)
+.save V(/vg2)
+.save V(/vs)
+.save V(5V0)
+.TEMP 27
+.tran 10m 30
+
+.CONTROL
+OPTIONS ABSTOL=1nA CHGTOL=1pC ITL1=150 ITL2=150 ITL4=500 RELTOL=0.011 
+run
+set filetype=ascii
+set wr_vecnames
+set wr_singlescale
+wrdata tmp.txt V("/vd1") V("/vd2") V("/vcont")
+* write tmp.txt V("/vd1")
+.ENDC 
+.IC V(/vd2)=2.0  V(/vd1)=4.5 
+
+.end
