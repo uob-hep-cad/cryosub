@@ -1,0 +1,139 @@
+*Jul 01, 2013
+*ECN S13-1457, Rev. B
+*File Name: SiS407DN_PS_RC.txt and SiS407DN_PS_RC.lib
+*This document is intended as a SPICE modeling guideline and does not
+*constitute a commercial product datasheet.  Designers should refer to the
+*appropriate datasheet of the same number for guaranteed specification
+*limits.
+* source GENERARTE-COMP PCH
+.SUBCKT SiS407DN_PS_RC D G S PARAMS: C2=1000 R1=1M C3=1000 R2=1M C4=1000 R3=1M
++  C5=1000 R4=1M R5=1M C1=1000
+C_CT6         N11708 N11712  6.1452m  TC=0,0 
+C_CF2         0 N16364  28.3429m  TC=0,0 
+R_RT1         J-A-TEMP-TANK N11404  49.1065 TC=0,0 
+C_CF7         0 N18737  4.7701m  TC=0,0 
+R_RT7         N11712 N11716  711.3159m TC=0,0 
+C_CF4         0 N16388  1.4062  TC=0,0 
+G_G7         0 JUNCTION-TEMPERATURE-1RC VALUE {
++  (V(Source)-V(Drain))*I(V_V_Source)+(V(Source)-V(Gate))*(-I(V_V_Gate)) }
+X_U1         DRAIN GATE SOURCE SiS407DN 
+C_C10         N94536 N94151  {C4}  TC=0,0 
+C_C12         N95722 N95798  {C2}  TC=0,0 
+C_C5         N92368 N92773  {C2}  TC=0,0 
+V_V_Gate         G GATE 0VDC
+R_RT3         N11408 N11412  8.7341 TC=0,0 
+C_C8         N94061 N94123  {C2}  TC=0,0 
+R_RF3         N16384 N16388  21.8233 TC=0,0 
+V_V4         N11732 0 {TEMP}
+R_R10         N94536 N94151  {R4} TC=0,0 
+R_R5         N92368 N92773  {R2} TC=0,0 
+C_C3         N91434 N91125  {C2}  TC=0,0 
+R_R12         N95722 N95798  {R2} TC=0,0 
+R_R8         N94061 N94123  {R2} TC=0,0 
+R_RT8         N11716 N11732  1.6119 TC=0,0 
+R_RT6         N11708 N11712  762.7202m TC=0,0 
+R_R3         N91434 N91125  {R2} TC=0,0 
+G_DissipationPower         0 J-A-TEMP-FILTER VALUE {
++  (V(Source)-V(Drain))*I(V_V_Source)+(V(Source)-V(Gate))*(-I(V_V_Gate)) }
+C_CT2         N11404 N11408  27.5314m  TC=0,0 
+R_RT5         J-C-TEMP-TANK N11708  714.0639m TC=0,0 
+C_C1         JUNCTION-TEMPERATURE-1RC N89014  {C1}  TC=0,0 
+C_C13         N95798 N95860  {C3}  TC=0,0 
+R_RF2         N16364 N16384  17.4872 TC=0,0 
+V_V3         N11450 0 {TEMP}
+C_C9         N94123 N94536  {C3}  TC=0,0 
+R_R13         N95798 N95860  {R3} TC=0,0 
+R_RF8         N18741 N18767  763.0844m TC=0,0 
+C_CT1         J-A-TEMP-TANK N11404  1.5218  TC=0,0 
+R_RF1         J-A-TEMP-FILTER N16364  8.8174 TC=0,0 
+R_RT2         N11404 N11408  17.0470 TC=0,0 
+R_R9         N94123 N94536  {R3} TC=0,0 
+C_CT4         N11412 N11450  4.2555m  TC=0,0 
+R_RF5         J-C-TEMP-FILTER N18733  768.7097m TC=0,0 
+V_V5         N16436 0 {TEMP}
+C_CT3         N11408 N11412  748.7952m  TC=0,0 
+G_G5         0 J-A-TEMP-TANK VALUE {
++  (V(Source)-V(Drain))*I(V_V_Source)+(V(Source)-V(Gate))*(-I(V_V_Gate)) }
+C_C4         JUNCTION-TEMPERATURE-3RC N92368  {C1}  TC=0,0 
+R_RF7         N18737 N18741  1.5672 TC=0,0 
+C_C14         N95860 N96370  {C4}  TC=0,0 
+C_C11         JUNCTION-TEMPERATURE-5RC N95722  {C1}  TC=0,0 
+R_RT4         N11412 N11450  6.1124 TC=0,0 
+C_CF8         0 N18741  2.6818m  TC=0,0 
+C_C7         JUNCTION-TEMPERATURE-4RC N94061  {C1}  TC=0,0 
+R_R1         JUNCTION-TEMPERATURE-1RC N89014  {R1} TC=0,0 
+C_C2         JUNCTION-TEMPERATURE-2RC N91434  {C1}  TC=0,0 
+R_R4         JUNCTION-TEMPERATURE-3RC N92368  {R1} TC=0,0 
+R_R14         N95860 N96370  {R4} TC=0,0 
+R_R11         JUNCTION-TEMPERATURE-5RC N95722  {R1} TC=0,0 
+C_CF5         0 J-C-TEMP-FILTER  520.4699u  TC=0,0 
+C_CF1         0 J-A-TEMP-FILTER  3.9175m  TC=0,0 
+R_R7         JUNCTION-TEMPERATURE-4RC N94061  {R1} TC=0,0 
+R_R2         JUNCTION-TEMPERATURE-2RC N91434  {R1} TC=0,0 
+C_CT5         J-C-TEMP-TANK N11708  558.9606u  TC=0,0 
+C_C15         N96370 N95888  {C5}  TC=0,0 
+V_V9         N92392 0 {TEMP}
+V_V_Source         S SOURCE 0VDC
+V_V11         N95888 0 {TEMP}
+R_RF4         N16388 N16436  32.8721 TC=0,0 
+C_CT8         N11716 N11732  9.1652m  TC=0,0 
+V_V10         N94151 0 {TEMP}
+R_R15         N96370 N95888  {R5} TC=0,0 
+G_G4         0 J-C-TEMP-FILTER VALUE {
++  (V(Source)-V(Drain))*I(V_V_Source)+(V(Source)-V(Gate))*(-I(V_V_Gate)) }
+V_V8         N91125 0 {TEMP}
+C_C6         N92773 N92392  {C3}  TC=0,0 
+C_CT7         N11712 N11716  28.6777m  TC=0,0 
+G_G9         0 JUNCTION-TEMPERATURE-3RC VALUE {
++  (V(Source)-V(Drain))*I(V_V_Source)+(V(Source)-V(Gate))*(-I(V_V_Gate)) }
+C_CF6         0 N18733  747.0122u  TC=0,0 
+R_R6         N92773 N92392  {R3} TC=0,0 
+G_G11         0 JUNCTION-TEMPERATURE-5RC VALUE {
++  (V(Source)-V(Drain))*I(V_V_Source)+(V(Source)-V(Gate))*(-I(V_V_Gate)) }
+V_V7         N89014 0 {TEMP}
+C_CF3         0 N16384  690.8084m  TC=0,0 
+G_G10         0 JUNCTION-TEMPERATURE-4RC VALUE {
++  (V(Source)-V(Drain))*I(V_V_Source)+(V(Source)-V(Gate))*(-I(V_V_Gate)) }
+G_G8         0 JUNCTION-TEMPERATURE-2RC VALUE {
++  (V(Source)-V(Drain))*I(V_V_Source)+(V(Source)-V(Gate))*(-I(V_V_Gate)) }
+R_RF6         N18733 N18737  695.3237m TC=0,0 
+V_V_Drain         DRAIN D 0VDC
+G_G6         0 J-C-TEMP-TANK VALUE {
++  (V(Source)-V(Drain))*I(V_V_Source)+(V(Source)-V(Gate))*(-I(V_V_Gate)) }
+V_V6         N18767 0 {TEMP}
+.ENDS
+
+*May 03, 2010
+*Doc. ID: 66658, ECN S10-1081, Rev. A
+*File Name: SiS407DN_PS.txt and SiS407DN_PS.lib
+*This document is intended as a SPICE modeling guideline and does not
+*constitute a commercial product data sheet. Designers should refer to the
+*appropriate data sheet of the same number for guaranteed specification
+*limits.
+.SUBCKT SiS407DN D G S 
+M1 3 GX S S PMOS W= 3786000u L= 0.25u 
+M2 S GX S D NMOS W= 3786000u L= 4.219e-07 
+R1 D 3 1.201e-03 TC=3.133e-02 1.870e-05 
+CGS GX S 4.559e-10 
+CGD GX D 2.836e-11 
+RG G GY 2 
+RTCV 100 S 1e6 TC=-8.877e-04 -8.118e-07 
+ETCV GY GX 100 200 1 
+ITCV S 100 1u 
+VTCV 200 S 1 
+DBD D S DBD 
+**************************************************************** 
+.MODEL PMOS PMOS ( LEVEL = 3 TOX = 1.7e-8 
++ RS = 9.430e-03 KP = 9.310e-05 NSUB = 1.263e+16 
++ KAPPA = 2.099e-02 ETA = 1.584e-07 NFS = 2.282e+12 
++ LD = 0 IS = 0 TPG = -1) 
+*************************************************************** 
+.MODEL NMOS NMOS ( LEVEL = 3 TOX = 1.7e-8 
++NSUB = 5.452e+16 IS = 0 TPG = -1 ) 
+**************************************************************** 
+.MODEL DBD D ( 
++FC = 0.1 TT = 1.809e-08 T_MEASURED = 25 BV = 22 
++RS = 2.488e-03 N = 1.616e+00 IS = 1.000e-07 
++EG = 1.100e+00 XTI = 3.130e-01 TRS1 = 1.000e-05 
++CJO = 1.075e-10 VJ = 8.999e-01 M = 2.000e-01 ) 
+.ENDS 

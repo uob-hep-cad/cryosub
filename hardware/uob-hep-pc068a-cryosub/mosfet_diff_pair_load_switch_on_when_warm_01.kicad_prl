@@ -62,11 +62,11 @@
       35,
       36
     ],
-    "visible_layers": "ffefc33_7ffffff9",
+    "visible_layers": "fffffff_ffffffff",
     "zone_display_mode": 0
   },
   "meta": {
-    "filename": "cryosub_power_converter_top_v03.kicad_prl",
+    "filename": "mosfet_diff_pair_load_switch_on_when_warm_01.kicad_prl",
     "version": 3
   },
   "project": {
