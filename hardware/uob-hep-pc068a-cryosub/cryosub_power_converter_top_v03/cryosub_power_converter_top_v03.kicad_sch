@@ -1680,13 +1680,13 @@
       (reference "L5") (unit 1) (value "1.0uH") (footprint "Inductor_SMD:L_0603_1608Metric")
     )
     (path "/00000000-0000-0000-0000-000061394019/00000000-0000-0000-0000-000060855e70"
-      (reference "Q1") (unit 1) (value "IRLML2402TRPBF") (footprint "Package_TO_SOT_SMD:SOT-23")
+      (reference "Q1") (unit 1) (value "IRLML2803PBF") (footprint "Package_TO_SOT_SMD:SOT-23")
     )
     (path "/00000000-0000-0000-0000-000061394019/00000000-0000-0000-0000-000060855e71"
-      (reference "Q2") (unit 1) (value "IRLML2402TRPBF") (footprint "Package_TO_SOT_SMD:SOT-23")
+      (reference "Q2") (unit 1) (value "IRLML2803PBF") (footprint "Package_TO_SOT_SMD:SOT-23")
     )
     (path "/00000000-0000-0000-0000-000061394019/16cd4310-7f18-46c4-bffc-83ac4a1b5ca2"
-      (reference "Q?") (unit 1) (value "SiS407DN") (footprint "Package_SO:Vishay_PowerPAK_1212-8_Single")
+      (reference "Q3") (unit 1) (value "SiS407DN") (footprint "Package_SO:Vishay_PowerPAK_1212-8_Single")
     )
     (path "/00000000-0000-0000-0000-0000613f83d0"
       (reference "R1") (unit 1) (value "49.9k") (footprint "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder")
