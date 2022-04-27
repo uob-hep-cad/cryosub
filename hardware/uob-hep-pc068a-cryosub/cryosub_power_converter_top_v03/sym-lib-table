@@ -3,4 +3,5 @@
   (lib (name "MAX15059BATET")(type "Legacy")(uri "${KIPRJMOD}/MAX15059BATET.lib")(options "")(descr ""))
   (lib (name "LTC3129")(type "Legacy")(uri "${KIPRJMOD}/LTC3129EMSE-1-PBF/2021-12-17_13-26-38.lib")(options "")(descr ""))
   (lib (name "MOSFET")(type "KiCad")(uri "${KIPRJMOD}/MOSFET.kicad_sym")(options "")(descr ""))
+  (lib (name "B180-13-F")(type "Legacy")(uri "${KIPRJMOD}/B180-13-F.lib")(options "")(descr ""))
 )
